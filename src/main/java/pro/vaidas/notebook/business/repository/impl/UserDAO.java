@@ -1,25 +1,26 @@
 package pro.vaidas.notebook.business.repository.impl;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.annotations.UuidGenerator;
 import org.hibernate.type.SqlTypes;
 
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name="notes")
+@Table(name="users")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class NoteDAO {
+public class UserDAO {
 
     @Id
     @UuidGenerator
@@ -27,16 +28,11 @@ public class NoteDAO {
     @Column(length = 36, columnDefinition = "varchar(36)", updatable = false, nullable = false)
     private UUID id;
 
-    @NotBlank(message = "Note title is a mandatory field.")
+    @NotBlank(message = "email is mandatory")
     @NotNull
-    private String title;
-    private String content;
-    private LocalDateTime created;
-    private LocalDateTime updated;
+    private String email;
 
-    @PrePersist
-    protected void prePersist() {
-        if (created == null) created = LocalDateTime.now();
-        updated = LocalDateTime.now();
-    }
+    @NotBlank(message = "password is mandatory")
+    @NotNull
+    private String password;
 }
