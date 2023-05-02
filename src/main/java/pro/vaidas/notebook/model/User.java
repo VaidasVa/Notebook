@@ -8,7 +8,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Component
@@ -16,16 +15,20 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Note {
+public class User {
 
     private UUID id;
 
     @NotBlank
     @NotNull
-    private String title;
-    private String content;
-    private LocalDateTime created;
-    private LocalDateTime updated;
+    private String email;
 
-    // todo add FK to connect to user
+    @NotBlank
+    @NotNull
+    private String password;
+
+// todo add FK to connect to user
+// todo created, updated, prepersist
+
+
 }

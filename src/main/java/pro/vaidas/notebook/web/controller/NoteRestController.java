@@ -25,34 +25,34 @@ public class NoteRestController {
 
     private final NoteService service;
 
-//    @GetMapping
-//    public List<Note> getAllNotes() {
-//            return service.getAllNotes();
-//    }
-//
-//    @GetMapping("/{id}")
-//    public String getNoteById(Model model, @PathVariable UUID id) {
-//        Note note = service.getNoteById(id);
+    @GetMapping
+    public List<Note> getAllNotes() {
+            return service.getAllNotes();
+    }
+
+    @GetMapping("/{id}")
+    public Note getNoteById(Model model, @PathVariable UUID id) {
+        Note note = service.getNoteById(id);
 //        model.addAttribute("note", note);
-//        return "note";
-//    }
-//
-//    @PostMapping
-//    public ResponseEntity postNote(@RequestBody Note note) {
-//        service.addNote(note);
-//        return new ResponseEntity<>(HttpStatus.CREATED);
-//    }
-//
-//    @PutMapping("/{id}")
-//    public ResponseEntity putNote(@PathVariable UUID id, @RequestBody Note note) {
-//        service.updateNote(id, note);
-//        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//    }
-//
-//    @DeleteMapping("/{id}")
-//    public ResponseEntity deleteNote(@PathVariable UUID id) {
-//        service.deleteNote(id);
-//        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//    }
+        return service.getNoteById(id);
+    }
+
+    @PostMapping
+    public ResponseEntity postNote(@RequestBody Note note) {
+        service.addNote(note);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity putNote(@PathVariable UUID id, @RequestBody Note note) {
+        service.updateNote(id, note);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteNote(@PathVariable UUID id) {
+        service.deleteNote(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 
 }

@@ -1,0 +1,143 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css');
+
+html{
+    height:100%;
+}
+
+body {
+     min-width: 100%; 
+     margin: auto;
+    }
+
+/**********/
+/* HEADER */
+/**********/
+
+header{ 
+    min-height:45px;
+    min-width: 100%;
+    padding: 10px;
+    background-color: rgba(67, 117, 170, 0.66);
+    color: white;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: rigt;
+}
+
+.move {margin-left: auto;}
+
+.pagetop>div>a>input{
+    background-color:  rgb(67, 117, 170);
+    color: white;
+    font-size: larger;
+    font-style:normal;
+    border-color: rgba(67, 117, 170, 0.66);
+    padding: 10px 30px;
+    margin-left: 0;
+}
+
+.pagetop>div>a>input:hover,
+.pagetop>div>a>input:active{
+    background-color: white;
+    color:  rgb(67, 117, 170);
+    border-color: white;
+}
+
+.p-2,
+.p-2>input{
+
+    padding: 0 auto;
+}
+
+/*********/
+/* TABLE */
+/*********/
+
+.table-titles>th{
+    background-color: rgb(67, 117, 170);
+    color: white;
+    text-align: c;
+}
+
+.table>tbody>tr>td:first-child>a{
+    text-decoration: none;
+    color: rgb(67, 117, 170);
+}
+
+.table>tbody>tr>td:nth-child(n+2){
+    color:grey;
+    font-size: smaller;
+}
+
+.container>form{
+    border: none;
+}
+
+.form-control{
+    margin-bottom: 30px;;
+}
+
+.content{
+    padding-bottom: 100px;
+}
+
+.updatebttn,
+.updatebttn:hover{
+    min-width: 50%; 
+    color: white;
+    background-color: rgba(67, 117, 170, 0.66);}
+
+.btn-outline-secondary{
+    min-width: 49%;
+}
+
+/*********/
+/* LOGIN */
+/*********/
+
+.login {
+    width: 50%;
+    padding: 20px;
+    border: none;
+}
+
+
+.login>div>input{
+    width: 50%;
+    padding: 2px 10px;
+    margin: 5px;
+}
+
+.loginbtn{
+    color: white;
+    background-color: rgba(67, 117, 170, 0.66);
+    max-width: 25%;
+    min-width: 25%;
+}
+
+.regbtn {
+    border: none;
+    background-color: white;
+    max-width: 25%;
+}
+
+/**********/
+/* FOOTER */
+/**********/
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+    padding: 5px;
+    background-color: rgba(67, 117, 170, 0.66);
+    color: rgb(67, 117, 170);
+    text-align: center;
+    font-size: small;
+}
+/* 
+.loginFormContainer{
+    max-width: 50%;
+} */
+
