@@ -4,43 +4,104 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="388938fa-49f7-482a-a9b9-f2d464d23d25" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/131f5f06-9538-4f3b-b102-3eaa7b4651ce.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/131f5f06-9538-4f3b-b102-3eaa7b4651ce/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/131f5f06-9538-4f3b-b102-3eaa7b4651ce/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/131f5f06-9538-4f3b-b102-3eaa7b4651ce/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/business/mappers/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/business/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/business/repository/impl/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/business/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/business/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/web/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/web/controller/UserRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/NotebookApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/NotebookApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/business/repository/impl/NoteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/business/repository/impl/NoteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/model/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/model/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/web/controller/NoteRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pro/vaidas/notebook/web/controller/NoteRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newNote.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newNote.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/note.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/note.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/notes.html" afterDir="false" />
+    <list default="true" id="388938fa-49f7-482a-a9b9-f2d464d23d25" name="Changes" comment="Web Thymeleaf interface updates">
+      <change afterPath="$PROJECT_DIR$/Notebook-client/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/NotebookClientApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/config/RestTemplateBuilderConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/controller/NoteClientRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/model/Note.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/service/NoteClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/service/NoteClientImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-client/src/test/java/pro/vaidas/notebookclient/NotebookClientApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/NotebookServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/mappers/NoteMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/mappers/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/repository/NoteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/repository/impl/NoteDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/repository/impl/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/service/NoteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/service/impl/NoteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/model/Note.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/NoteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/api/NoteRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/api/UserRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/newNote.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/note.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/notes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/test/java/pro/vaidas/notebookserver/NotebookServerApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/Notebook-client">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/Notebook-server">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/Notebook-server">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Notebook-client" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Notebook-server" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Notebook-server" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Notebook-server" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,7 +113,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Notebook-server" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,37 +136,44 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "webUpdates",
-    "last_opened_file_path": "/Users/vaidas/Desktop/Files/Programming/GitHub/Notebook/src/main/resources/templates",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "File.Encoding",
-    "spring.configuration.checksum": "fb5d1b4a2312e239652b13a24ed9a74f"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vaidas/Desktop/Files/Programming/GitHub/Notebook/Notebook-server/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.14456719&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;02d496aa971d45f177cee6ef572abaa5&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="pro.vaidas.notebook.client" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Notebook-server/src/main/resources" />
+      <recent name="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver" />
+      <recent name="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/src/main/resources/static" />
     </key>
@@ -122,7 +190,58 @@
       <recent name="pro.vaidas.notebook.client" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.NotebookApplication">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.NotebookClientApplication">
+    <configuration name="Notebook-server [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Notebook-server" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="Notebook-server [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Notebook-server" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="NoteClientImplTest.getNotes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="notebook" />
       <extension name="coverage">
@@ -171,8 +290,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NotebookClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Notebook-client.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pro.vaidas.notebookclient.NotebookClientApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotebookServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Notebook-server.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pro.vaidas.notebookserver.NotebookServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Notebook-server [build]" />
+        <item itemvalue="Gradle.Notebook-server [clean]" />
         <item itemvalue="JUnit.NoteClientImplTest.getNotes" />
         <item itemvalue="Maven.notebook [clean]" />
       </list>
@@ -192,8 +327,20 @@
       <workItem from="1682752718629" duration="63000" />
       <workItem from="1682772795644" duration="194000" />
       <workItem from="1682862436401" duration="1628000" />
-      <workItem from="1682942807094" duration="14223000" />
+      <workItem from="1682942807094" duration="14310000" />
+      <workItem from="1683098417537" duration="5717000" />
+      <workItem from="1683278967297" duration="5264000" />
+      <workItem from="1683286963176" duration="192000" />
+      <workItem from="1683287234380" duration="17000" />
     </task>
+    <task id="LOCAL-00001" summary="Web Thymeleaf interface updates">
+      <created>1683041589494</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683041589494</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,5 +374,7 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/git@github.com:VaidasVa/Notebook.git" />
     </ignored-roots>
+    <MESSAGE value="Web Thymeleaf interface updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Web Thymeleaf interface updates" />
   </component>
 </project>
