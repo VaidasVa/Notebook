@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link th:href="@{/style.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
     <title>Notes</title>
 </head>
 
@@ -20,7 +20,8 @@
         <div class="loginFormContainer">
             <form class="col card p-3 my-5 login" method="get" th:action="'/notes'">
                 <div class="form-group">
-                    <input class="form-control" id="email" placeholder="e-mail" required type="email" />
+<!--                    <input class="form-control" id="email" placeholder="e-mail" required type="email" />-->
+                    <input class="form-control" id="username" placeholder="username" required type="text" />
                     <input class="form-control content" id="password" placeholder="password" type="password" />
                 </div>
                 <div class="loginfrm">

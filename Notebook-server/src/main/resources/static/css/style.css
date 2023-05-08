@@ -22,7 +22,7 @@ header{
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
-    align-items: rigt;
+    align-items: right;
 }
 
 .move {margin-left: auto;}

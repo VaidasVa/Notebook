@@ -36,4 +36,9 @@ public class UserServiceImpl implements UserService {
                 .save(mapper.userToUserDAO(user)));
     }
 
+    @Override
+    public User findUserByEmail(String email) {
+        return repository.findByEmail(email);
+    }
+
 }

@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/Notebook-client" />
     <file type="web" url="file://$PROJECT_DIR$/Notebook-server" />
+    <file type="web" url="file://$PROJECT_DIR$/User-service" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">

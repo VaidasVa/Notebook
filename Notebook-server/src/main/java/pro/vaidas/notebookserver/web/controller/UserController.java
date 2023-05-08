@@ -14,9 +14,14 @@ public class UserController {
     @Autowired
     UserService service;
 
-    @GetMapping
-    public String index(Model model){
+    @GetMapping("/")
+    public String login(){
         return "index";
+    }
+
+    @PostMapping
+    public String indexToNote(Model model){
+        return "notes";
     }
 
     @GetMapping("/register")

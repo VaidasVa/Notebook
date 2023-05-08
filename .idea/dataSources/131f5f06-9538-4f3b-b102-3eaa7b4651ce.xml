@@ -76,12 +76,17 @@
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="26" parent="15" name="PRIMARY">
+    <column id="26" parent="15" name="name">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="27" parent="15" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="27" parent="15" name="PRIMARY">
+    <key id="28" parent="15" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
