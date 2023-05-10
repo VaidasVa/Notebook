@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="EN">
+
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <title>Notes</title>
+</head>
+
+<header>
+    <div class="d-flex justify-content-between pagetop">
+        <div>
+            <h1>notes.<span style="color: black;">login</span></h1>
+        </div>
+    </div>
+</header>
+
+<body>
+    <center>
+        <div class="loginFormContainer">
+            <form class="col card p-3 my-5 login" method="get" th:action="'/notes'">
+                <div class="form-group">
+<!--                    <input class="form-control" id="email" placeholder="e-mail" required type="email" />-->
+                    <input class="form-control" id="username" placeholder="username" required type="text" />
+                    <input class="form-control content" id="password" placeholder="password" type="password" />
+                </div>
+                <div class="loginfrm">
+                    <input class="btn loginbtn" type="submit" value="login"
+                        onsubmit="window.location.href='/notes'"><br>
+                    <input class="regbtn" type="button" value="register here"
+                        onclick="window.location.href='/register'">
+                </div>
+            </form>
+        </div>
+    </center>
+</body>
+
+<footer>
+    &nbsp
+</footer>
+
+</html>
