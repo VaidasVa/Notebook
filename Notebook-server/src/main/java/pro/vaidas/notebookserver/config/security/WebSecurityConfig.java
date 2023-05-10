@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 //import org.springframework.security.config.annotation.web.builders.*;
 //import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -36,29 +37,15 @@ public class WebSecurityConfig  {
 //    }
 
 //
-//    @Bean
-//    protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-//        http.csrf().disable()
-//                .authorizeHttpRequests((authorize) -> {
-//                    authorize
-//                            .requestMatchers("/register/**", "/").permitAll()
-//                            .requestMatchers("/resources/**", "/resources/static/*.css", "/webjars/**").permitAll()
-//                            .requestMatchers("/notes", "/notes*").authenticated();
-//                    System.out.println("logging in user");
-//                })
-//                .formLogin(
-//                        form -> form
-//                                .loginPage("/")
-//                                .loginProcessingUrl("/")
-//                                .defaultSuccessUrl("/notes")
-//                                .permitAll()
-//                ).logout(
-//                        logout -> logout
-//                                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-//                                .permitAll()
-//                );
-//        return http.build();
-//    }
+    @Bean
+    protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http
+                .authorizeHttpRequests()
+                .anyRequest().authenticated()
+                .and().httpBasic(Customizer.withDefaults())
+                .csrf().ignoringRequestMatchers("/api/**");
+        return http.build();
+    }
 //
 //    @Bean
 //    public static PasswordEncoder passwordEncoder(){

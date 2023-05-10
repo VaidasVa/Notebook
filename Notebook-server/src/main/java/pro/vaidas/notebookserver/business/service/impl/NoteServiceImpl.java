@@ -23,10 +23,8 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 @AllArgsConstructor
 public class NoteServiceImpl implements NoteService {
 
-//    @Autowired
     private final NoteRepository repository;
 
-//    @Autowired
     private final NoteMapper mapper;
 
     @Override

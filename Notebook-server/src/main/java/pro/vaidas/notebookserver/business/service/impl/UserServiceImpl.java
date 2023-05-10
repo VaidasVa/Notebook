@@ -16,10 +16,8 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
 
-//    @Autowired
     private final UserRepository repository;
 
-//    @Autowired
     private final UserMapper mapper;
 
     @Override
@@ -40,5 +38,4 @@ public class UserServiceImpl implements UserService {
     public User findUserByEmail(String email) {
         return repository.findByEmail(email);
     }
-
 }

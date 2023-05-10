@@ -4,6 +4,22 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Auth-server" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Auth-server" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Kafka-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Kafka-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Notebook-client" />
         <option name="modules">
           <set>

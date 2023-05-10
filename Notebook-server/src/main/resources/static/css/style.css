@@ -17,12 +17,13 @@ header{
     min-height:45px;
     min-width: 100%;
     padding: 10px;
-    background-color: rgba(67, 117, 170, 0.66);
+    /*background-color: rgba(67, 117, 170, 0.66);*/
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,117,170,0.66) 0%, rgba(48,144,194,1) 30%, rgba(1,0,53,1) 80%);
     color: white;
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
-    align-items: right;
+    /*align-items: right;*/
 }
 
 .move {margin-left: auto;}
@@ -46,7 +47,6 @@ header{
 
 .p-2,
 .p-2>input{
-
     padding: 0 auto;
 }
 
@@ -57,7 +57,7 @@ header{
 .table-titles>th{
     background-color: rgb(67, 117, 170);
     color: white;
-    text-align: c;
+    text-align: center;
 }
 
 .table>tbody>tr>td:first-child>a{
@@ -103,6 +103,10 @@ header{
 }
 
 
+.loginFormContainer{
+    align-items: center;
+}
+
 .login>div>input{
     width: 50%;
     padding: 2px 10px;
@@ -136,8 +140,6 @@ footer{
     text-align: center;
     font-size: small;
 }
-/* 
-.loginFormContainer{
-    max-width: 50%;
-} */
+
+
 
