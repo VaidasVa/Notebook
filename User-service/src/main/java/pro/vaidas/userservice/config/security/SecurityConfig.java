@@ -15,10 +15,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
-
-@Configuration
-@EnableWebSecurity
-public class SecurityConfig {
+//
+//@Configuration
+//@EnableWebSecurity
+//public class SecurityConfig {
 //
 //    private CustomUserDetailsService userDetailsService;
 //
@@ -27,39 +27,39 @@ public class SecurityConfig {
 //        this.userDetailsService = userDetailsService;
 //    }
 
-    @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        return http
-                .csrf().disable()
-                .authorizeHttpRequests()
-                .requestMatchers("/admin").hasRole("ADMIN")
-                .anyRequest().permitAll()
-                .and()
-                .formLogin().loginPage("http://localhost:8084")
-                .successForwardUrl("http://localhost:8080/notes")
-                .and()
-                .logout().logoutSuccessUrl("/http://localhost:8080/index")
-                .and()
-                .build();
-            }
-
-    @Bean
-        public UserDetailsService users(PasswordEncoder encoder) {
-            UserDetails admin = User.builder()
-                    .username("admin")
-                    .password(encoder.encode("a"))
-                    .roles("USER", "ADMIN").build();
-            UserDetails user = User.builder()
-                    .username("user")
-                    .password(encoder.encode("a"))
-                    .roles("USER").build();
-            return new InMemoryUserDetailsManager(admin, user);
-    }
-
-    @Bean
-    PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
+//    @Bean
+//    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+//        return http
+//                .csrf().disable()
+//                .authorizeHttpRequests()
+//                .requestMatchers("/admin").hasRole("ADMIN")
+//                .anyRequest().permitAll()
+//                .and()
+//                .formLogin().loginPage("http://localhost:8084")
+//                .successForwardUrl("http://localhost:8080/notes")
+//                .and()
+//                .logout().logoutSuccessUrl("/http://localhost:8080/index")
+//                .and()
+//                .build();
+//            }
+//
+//    @Bean
+//        public UserDetailsService users(PasswordEncoder encoder) {
+//            UserDetails admin = User.builder()
+//                    .username("admin")
+//                    .password(encoder.encode("a"))
+//                    .roles("USER", "ADMIN").build();
+//            UserDetails user = User.builder()
+//                    .username("user")
+//                    .password(encoder.encode("a"))
+//                    .roles("USER").build();
+//            return new InMemoryUserDetailsManager(admin, user);
+//    }
+//
+//    @Bean
+//    PasswordEncoder passwordEncoder() {
+//        return new BCryptPasswordEncoder();
+//    }
 
 
 //    @Bean
@@ -69,5 +69,5 @@ public class SecurityConfig {
 //    }
 
 
-}
+//}
 

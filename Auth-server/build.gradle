@@ -21,7 +21,6 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-authorization-server', version: '1.0.2'
-
 }
 
 tasks.named('test') {

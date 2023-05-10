@@ -5,44 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="388938fa-49f7-482a-a9b9-f2d464d23d25" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Kafka-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-service/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-service/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-service/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-service/src/main/java/pro/vaidas/kafkaservice/KafkaServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-service/src/main/java/pro/vaidas/kafkaservice/config/KafkaProducerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-service/src/main/java/pro/vaidas/kafkaservice/config/KafkaTopicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-service/src/test/java/pro/vaidas/kafkaservice/KafkaServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/User-service/src/main/java/pro/vaidas/userservice/config/security/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/User-service/src/main/java/pro/vaidas/userservice/controllers/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/User-service/src/main/resources/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/User-service/src/main/resources/templates/admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/User-service/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/User-service/src/main/resources/templates/index1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/config/RestTemplateBuilderConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/config/RestTemplateBuilderConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/service/impl/NoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/service/impl/NoteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/config/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/config/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/User-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/src/main/java/pro/vaidas/userservice/config/security/UserNamePasswordAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/User-service/src/main/java/pro/vaidas/userservice/config/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User-service/src/main/java/pro/vaidas/userservice/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/User-service/src/main/java/pro/vaidas/userservice/config/security/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/Auth-server">
@@ -146,7 +121,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.14456719",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "project.propGUI",
     "spring.configuration.checksum": "5c97839842fd8a7b91e21dba2c09945d"
   },
   "keyToStringList": {
@@ -177,7 +152,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.NotebookClientApplication">
+  <component name="RunManager" selected="Spring Boot.AuthServerApplication">
     <configuration name="User-service [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -335,7 +310,7 @@
       <workItem from="1682688045140" duration="347000" />
       <workItem from="1682688421662" duration="258000" />
       <workItem from="1683365995309" duration="29597000" />
-      <workItem from="1683535097381" duration="23115000" />
+      <workItem from="1683535097381" duration="25689000" />
     </task>
     <servers />
   </component>
@@ -372,6 +347,8 @@
       <path value="$PROJECT_DIR$/Notebook-client" />
       <path value="$PROJECT_DIR$/Notebook-server" />
       <path value="$PROJECT_DIR$/User-service" />
+      <path value="$PROJECT_DIR$/Auth-server" />
+      <path value="$PROJECT_DIR$/Kafka-service" />
     </ignored-roots>
   </component>
 </project>

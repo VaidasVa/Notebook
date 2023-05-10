@@ -23,9 +23,9 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import pro.vaidas.notebookserver.business.service.UserService;
 
-@Configuration
-@EnableWebSecurity
-public class WebSecurityConfig  {
+//@Configuration
+//@EnableWebSecurity
+//public class WebSecurityConfig  {
 
 //    @Autowired
 //    private UserDetailsService userDetailsService;
@@ -37,15 +37,15 @@ public class WebSecurityConfig  {
 //    }
 
 //
-    @Bean
-    protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http
-                .authorizeHttpRequests()
-                .anyRequest().authenticated()
-                .and().httpBasic(Customizer.withDefaults())
-                .csrf().ignoringRequestMatchers("/api/**");
-        return http.build();
-    }
+//    @Bean
+//    protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+//        http
+//                .authorizeHttpRequests()
+//                .anyRequest().authenticated()
+//                .and().httpBasic(Customizer.withDefaults())
+//                .csrf().ignoringRequestMatchers("/api/**");
+//        return http.build();
+//    }
 //
 //    @Bean
 //    public static PasswordEncoder passwordEncoder(){
@@ -68,4 +68,4 @@ public class WebSecurityConfig  {
 //                .build();
 //        return new InMemoryUserDetailsManager(user1, user2, admin);
 //    }
-}
+//}
