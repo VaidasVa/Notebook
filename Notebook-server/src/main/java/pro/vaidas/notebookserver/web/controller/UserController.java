@@ -30,6 +30,11 @@ public class UserController {
         return "register";
     }
 
+    @GetMapping("/no")
+    public String forbidden(){
+        return "403";
+    }
+
     @PostMapping("/register")
     public RedirectView saveUser(Model model, User user){
         service.saveUser(user);

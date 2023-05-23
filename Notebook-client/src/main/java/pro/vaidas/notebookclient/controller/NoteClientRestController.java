@@ -39,7 +39,6 @@ public class NoteClientRestController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-
     @DeleteMapping(value = "/{id}")
     public ResponseEntity deleteNote(@PathVariable("id") UUID id){
         service.deleteNote(id);
