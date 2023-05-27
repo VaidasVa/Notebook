@@ -57,10 +57,18 @@ header{
 .table-titles>th{
     background-color: rgb(67, 117, 170);
     color: white;
+
+}
+
+.table-titles>th:nth-child(2),
+.table-titles>th:nth-child(3),
+.align-middle
+{
     text-align: center;
 }
 
 .table>tbody>tr>td:first-child>a{
+    text-align: left;
     text-decoration: none;
     color: rgb(67, 117, 170);
 }
@@ -69,13 +77,16 @@ header{
     color:grey;
     font-size: smaller;
 }
+.container{
+    padding-bottom: 50px;
+}
 
 .container>form{
     border: none;
 }
 
 .form-control{
-    margin-bottom: 30px;;
+    margin-bottom: 30px;
 }
 
 .content{
@@ -130,7 +141,7 @@ header{
 /* FOOTER */
 /**********/
 footer{
-    position: absolute;
+    /*position: absolute;*/
     bottom: 0;
     width: 100%;
     margin-top: 40px;

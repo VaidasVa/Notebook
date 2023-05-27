@@ -5,53 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="388938fa-49f7-482a-a9b9-f2d464d23d25" name="Changes" comment="OAuth2 server impl">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/Kafka-service.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth-server/src/main/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-service/src/main/java/pro/vaidas/kafkaservice/config/Producer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-service/src/main/java/pro/vaidas/kafkaservice/model/Quote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-service/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/config/OAuthClientInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-client/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/config/kafka/Consumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/403.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ports.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/bootstrap/LoadCsvToDb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/bootstrap/LoadCsvToDbImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/bootstrap/NoteCsvRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/bootstrap/NoteCsvService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/bootstrap/NoteCsvServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/csv/myFile.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-05-05,_14_58_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-05-05__14_58__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/131f5f06-9538-4f3b-b102-3eaa7b4651ce.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/131f5f06-9538-4f3b-b102-3eaa7b4651ce.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafka-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafka-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafka-service/src/main/java/pro/vaidas/kafkaservice/KafkaServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka-service/src/main/java/pro/vaidas/kafkaservice/KafkaServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafka-service/src/main/java/pro/vaidas/kafkaservice/config/KafkaProducerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafka-service/src/main/java/pro/vaidas/kafkaservice/config/KafkaTopicConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/config/RestTemplateBuilderConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/config/RestTemplateBuilderConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/controller/NoteClientRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/controller/NoteClientRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebook-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/NotebookServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/NotebookServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/config/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/config/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/src/main/java/pro/vaidas/userservice/UserServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/src/main/java/pro/vaidas/userservice/config/security/CustomUserDetailsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/src/main/java/pro/vaidas/userservice/config/security/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/src/main/java/pro/vaidas/userservice/controllers/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/src/main/resources/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/src/main/resources/templates/admin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/src/main/resources/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/src/main/resources/templates/index1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User-service/src/test/java/pro/vaidas/userservice/UserServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/repository/impl/NoteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/repository/impl/NoteDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/config/kafka/Consumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/notes.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,10 +89,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="HTML File" />
-        <option value="Record" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -158,54 +127,69 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/vaidas/Desktop/Files/Programming/GitHub/Notebook&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.14456719&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;57b6a98568dcccf4dbd38dbf1184006c&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "dev",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_opened_file_path": "/Users/vaidas/Desktop/Files/Programming/GitHub/Notebook/Notebook-server/src/main/java/pro/vaidas/notebookserver",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.14456719",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "57b6a98568dcccf4dbd38dbf1184006c"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pro.vaidas.notebookserver.business.service" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver" />
+      <recent name="$PROJECT_DIR$/Notebook-server/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business" />
+      <recent name="$PROJECT_DIR$/Notebook-server/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Kafka-service" />
-      <recent name="$PROJECT_DIR$/User-service/src/main/resources/templates" />
-      <recent name="$PROJECT_DIR$/User-service/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Notebook-server/src/main/resources" />
+      <recent name="$PROJECT_DIR$/Notebook-server/src/main/resources/static/csv" />
+      <recent name="$PROJECT_DIR$/Notebook-server/src/main/resources/csv" />
       <recent name="$PROJECT_DIR$/User-service/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/User-service/src/main/resources/static" />
-      <recent name="$PROJECT_DIR$/Notebook-server/src/main/resources/static" />
-      <recent name="$PROJECT_DIR$/Notebook-server/src/main/resources/css" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="pro.vaidas.notebookserver.business.bootstrap" />
       <recent name="pro.vaidas.notebookserver.config" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="pro.vaidas.notebookserver.business.service.impl" />
+      <recent name="pro.vaidas.notebookserver.web.controller.api" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="pro.vaidas.notebookserver.config.kafka" />
@@ -219,71 +203,126 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.KafkaServiceApplication">
-    <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pro.vaidas.kafkaservice.impl.Consumer" />
-      <module name="Kafka-service.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pro.vaidas.kafkaservice.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Spring Boot.NotebookServerApplication">
+    <configuration name="NoteCsvServiceImplTest.convert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Notebook-server" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;pro.vaidas.notebookserver.business.service.impl.NoteCsvServiceImplTest.convert&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
     </configuration>
-    <configuration name="ConsumerAssignSeek" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pro.vaidas.kafkaservice.impl.ConsumerAssignSeek" />
-      <module name="Kafka-service.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pro.vaidas.kafkaservice.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="NoteServiceImplTest.addNote" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Notebook-server" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;pro.vaidas.notebookserver.business.service.impl.NoteServiceImplTest.addNote&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
     </configuration>
-    <configuration name="GetQuote" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pro.vaidas.kafkaservice.impl.GetQuote" />
-      <module name="Kafka-service.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pro.vaidas.kafkaservice.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="NoteServiceImplTest.deleteNote" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Notebook-server" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;pro.vaidas.notebookserver.business.service.impl.NoteServiceImplTest.deleteNote&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
     </configuration>
-    <configuration name="KafkaProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pro.vaidas.notebookserver.config.KafkaProducer" />
-      <module name="Notebook-server.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pro.vaidas.notebookserver.config.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="NoteServiceImplTest.getAllNotes_Positive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Notebook-server" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;pro.vaidas.notebookserver.business.service.impl.NoteServiceImplTest.getAllNotes_Positive&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
     </configuration>
-    <configuration name="Producer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pro.vaidas.kafkaservice.config.Producer" />
-      <module name="Kafka-service.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pro.vaidas.kafkaservice.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="NoteServiceImplTest.getNoteById_Negative" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Notebook-server" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;pro.vaidas.notebookserver.business.service.impl.NoteServiceImplTest.getNoteById_Negative&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
     </configuration>
     <configuration name="AuthServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Auth-server.main" />
@@ -313,13 +352,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="aws.lambda" factoryName="Remote">
+      <option name="credentialProviderId" />
+      <option name="regionId" />
+      <option name="functionName" />
+      <option name="input" />
+      <option name="inputIsFile" value="false" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProducerWithCallback" />
-        <item itemvalue="Application.GetQuote" />
-        <item itemvalue="Application.KafkaProducer" />
-        <item itemvalue="Application.ConsumerAssignSeek" />
-        <item itemvalue="Application.Consumer" />
+        <item itemvalue="Gradle.NoteServiceImplTest.getAllNotes_Positive" />
+        <item itemvalue="Gradle.NoteCsvServiceImplTest.convert" />
+        <item itemvalue="Gradle.NoteServiceImplTest.deleteNote" />
+        <item itemvalue="Gradle.NoteServiceImplTest.addNote" />
+        <item itemvalue="Gradle.NoteServiceImplTest.getNoteById_Negative" />
       </list>
     </recent_temporary>
   </component>
@@ -342,6 +389,9 @@
       <workItem from="1684332572821" duration="9168000" />
       <workItem from="1684517098750" duration="1514000" />
       <workItem from="1684832259847" duration="19284000" />
+      <workItem from="1684906625314" duration="3290000" />
+      <workItem from="1684992663475" duration="23565000" />
+      <workItem from="1685079311570" duration="10316000" />
     </task>
     <task id="LOCAL-00001" summary="OAuth2 server impl">
       <created>1683708831809</created>
@@ -405,6 +455,16 @@
     </ignored-roots>
     <MESSAGE value="OAuth2 server impl" />
     <option name="LAST_COMMIT_MESSAGE" value="OAuth2 server impl" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

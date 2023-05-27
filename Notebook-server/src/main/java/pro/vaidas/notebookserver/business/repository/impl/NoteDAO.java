@@ -1,12 +1,16 @@
 package pro.vaidas.notebookserver.business.repository.impl;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.annotations.UuidGenerator;
 import org.hibernate.type.SqlTypes;
@@ -17,6 +21,7 @@ import java.util.UUID;
 @Entity
 @Table(name="notes")
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class NoteDAO {

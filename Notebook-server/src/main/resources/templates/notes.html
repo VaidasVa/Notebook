@@ -24,35 +24,46 @@
 </header>
 
 <body>
-    <div class=" container">
-        <table class="table table-hover">
-            <thead class="thead-dark">
-                <tr class="table-titles">
-                    <th style="w-50">Title</th>
-                    <th>Created</th>
-                    <th>Updated</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:if="${#lists.isEmpty(notes)}" >
-                    <td class="text-center" colspan="4">No Notes yet.</td>
-                </tr>
+<div class="container">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+        <tr class="table-titles">
+            <th class="w-50">Title</th>
+            <th>Created</th>
+            <th>Updated</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${#lists.isEmpty(notes)}">
+            <td class="text-center" colspan="4">No Notes yet.</td>
+        </tr>
+        <tr th:each="note : ${notes}">
+            <td><a th:href="'/notes/' + ${note.id}">
+                <span th:text="${note.title}"></span>
+            </a>
+            </td>
 
-                <tr th:each="note : ${notes}">
+            <td class="align-middle" th:text="${#temporals.format(note.created, 'yyyy-MM-dd HH:mm:ss')}">2023-03-03
+            </td>
 
-                    <td><a th:href="'/notes/' + ${note.id}"><span th:text="${note.title}"></span></a></td>
-                    <td class="align-middle" th:text="${#temporals.format(note.created, 'yyyy-MM-dd HH:mm:ss')}">
-                        2023-03-03</td>
-                    <td class="align-middle" th:text="${#temporals.format(note.updated, 'yyyy-MM-dd HH:mm:ss')}">
-                        2023-03-04</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+            <td class="align-middle">
+                <th:block th:unless="${((#temporals.format(note.created, 'yyyy-MM-dd HH:mm:ss')) ==
+                                        (#temporals.format(note.updated, 'yyyy-MM-dd HH:mm:ss')))}">
+                    <span th:text="${#temporals.format(note.updated, 'yyyy-MM-dd HH:mm:ss')}"></span>
+                </th:block>
+                <th:block th:if="${((#temporals.format(note.created, 'yyyy-MM-dd HH:mm:ss')) ==
+                                        (#temporals.format(note.updated, 'yyyy-MM-dd HH:mm:ss')))}">
+                    <span th:text="'-'"></span>
+                </th:block>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 
 <footer>
-    end of the page
+    End of page
 </footer>
 
 </html>
