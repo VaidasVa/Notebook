@@ -23,6 +23,7 @@ public class Note {
     @NotBlank
     @NotNull
     private String title;
+
     private String content;
     private LocalDateTime created;
     private LocalDateTime updated;

@@ -13,31 +13,71 @@ body {
 /* HEADER */
 /**********/
 
-header{ 
+header{
+    align-self: center;
     min-height:45px;
     min-width: 100%;
     padding: 10px;
-    /*background-color: rgba(67, 117, 170, 0.66);*/
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,117,170,0.66) 0%, rgba(48,144,194,1) 30%, rgba(1,0,53,1) 80%);
     color: white;
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
-    /*align-items: right;*/
+}
+
+h1>span>a,
+h1>span>a:hover{
+    align-self: center;
+    text-decoration: none;
+    color: black;
 }
 
 .move {margin-left: auto;}
 
+.col-search{
+    padding-right: 0;
+    margin-right: -2px;
+    align-self: center;
+}
+.col-btn{
+    padding-left:0;
+    margin-left: -2px;
+    align-self: center;
+}
+
+.search-field {
+    align-self: center;
+    padding: 10px;
+    margin-left: 0;
+    margin-right: -5px;
+    border-color: rgba(67, 117, 170, 0.66);
+    border-radius: 5px 0 0 5px;
+}
+
+.search-btn{
+    align-self: center;
+    margin-left: -5px;
+    padding-left: 0;
+}
+
+.pagetop>form>div>a>input,
 .pagetop>div>a>input{
+    align-self: center;
     background-color:  rgb(67, 117, 170);
     color: white;
     font-size: larger;
     font-style:normal;
-    border-color: rgba(67, 117, 170, 0.66);
+    border: 0;
     padding: 10px 30px;
     margin-left: 0;
 }
 
+.pagetop>form>div>a>input{
+    align-self: center;
+    border-radius: 0 5px 5px 0;
+}
+
+.pagetop>form>div>a>input:hover,
 .pagetop>div>a>input:hover,
 .pagetop>div>a>input:active{
     background-color: white;
@@ -45,8 +85,10 @@ header{
     border-color: white;
 }
 
+
 .p-2,
 .p-2>input{
+    align-self: center;
     padding: 0 auto;
 }
 
@@ -93,14 +135,30 @@ header{
     padding-bottom: 100px;
 }
 
+.btn-outline-danger{
+    min-width: 5%;
+}
+
+.btn-outline-secondary{
+    min-width: 40%;
+}
+
 .updatebttn,
 .updatebttn:hover{
-    min-width: 50%; 
+    min-width: 52%;
     color: white;
     background-color: rgba(67, 117, 170, 0.66);}
 
-.btn-outline-secondary{
-    min-width: 49%;
+
+
+.table-nav,
+/*.table-nav>block>div>block>a,*/
+.table-nav>div>a
+{
+    align-items: center;
+    text-decoration: none;
+    color: rgba(67, 117, 170);
+    word-spacing: 7px;
 }
 
 /*********/

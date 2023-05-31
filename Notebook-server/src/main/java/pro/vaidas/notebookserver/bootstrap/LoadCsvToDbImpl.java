@@ -26,16 +26,15 @@ public class LoadCsvToDbImpl implements CommandLineRunner, LoadCsvToDb {
     }
 
     private void loadCSVdata() throws FileNotFoundException {
-//        System.out.println("I'm in...");
-        if (repository.count()<20){
+        if (repository.count()<100){
             File file = ResourceUtils.getFile("classpath:csv/myFile.csv");
             List<NoteCsvRecord> recordList = service.convert(file);
 
             recordList.forEach(record -> {
-                repository.save(NoteDAO.builder()
-                            .title(record.getTitle())
-                            .content(record.getContent())
-                        .build());
+                    repository.save(NoteDAO.builder()
+                                .title(record.getTitle())
+                                .content((record.getContent()))
+                            .build());
             });
         }
     }

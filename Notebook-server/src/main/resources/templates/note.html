@@ -9,7 +9,7 @@
 
 <header class="d-flex pagetop">
     <div class="mr-auto p-2">
-        <h1>notes.<span style="color: black;">all notes</span></h1>
+        <h1>notes.<span style="color: black;"><a href="/notes">all notes</a></span></h1>
     </div>
     <div class="p-2 move">
         <a th:href="'/notes/new'">
@@ -32,13 +32,15 @@
                 <input class="form-control" id="title" placeholder="Note title" required th:field="*{title}"
                     type="text" />
                 <label for="content">Content</label>
-                <input class="form-control content" id="content" placeholder="Note content" required
-                    th:field="*{content}" type="text" />
+                <textarea rows="10" class="form-control content" id="content" placeholder="Note content" required
+                    th:field="*{content}" type="text"></textarea>
             </div>
             <div>
-                <input class="btn updatebttn" type="submit" value="Update">
-                <input class="btn btn-outline-secondary" type="button" value="Don't update"
+
+                <a th:href="'/notes/delete/' + ${note.id}"><input class="btn btn-outline-danger" type="button" value="delete"></a></input>
+                <input class="btn btn-outline-secondary" type="button" value="don't update"
                     onclick="window.location.href='/notes'">
+                <input class="btn updatebttn" type="submit" value="update">
             </div>
         </form>
     </div>

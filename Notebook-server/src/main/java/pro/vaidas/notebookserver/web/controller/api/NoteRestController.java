@@ -1,6 +1,7 @@
 package pro.vaidas.notebookserver.web.controller.api;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
@@ -11,11 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import pro.vaidas.notebookserver.business.service.NoteService;
 import pro.vaidas.notebookserver.model.Note;
 
-import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -26,14 +27,17 @@ public class NoteRestController {
     private final NoteService service;
 
     @GetMapping
-    public List<Note> getAllNotes() {
-            return service.getAllNotes();
+    public Page<Note> getAllNotes(
+            @RequestParam(required = false) String title,
+            @RequestParam(required = false) String content,
+            @RequestParam(required = false) Integer pageNumber,
+            @RequestParam(required = false) Integer pageSize) {
+            return service.getAllNotes(title, content, pageNumber, pageSize);
     }
 
     @GetMapping("/{id}")
     public Note getNoteById(Model model, @PathVariable UUID id) {
         Note note = service.getNoteById(id);
-//        model.addAttribute("note", note);
         return service.getNoteById(id);
     }
 

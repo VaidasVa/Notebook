@@ -1,8 +1,6 @@
 package pro.vaidas.notebookserver.business.service.impl;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pro.vaidas.notebookserver.business.mappers.UserMapper;
 import pro.vaidas.notebookserver.business.repository.UserRepository;
@@ -29,8 +27,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User saveUser(User user){
-        return mapper.userDAOToUser(repository
+    public void saveUser(User user){
+        mapper.userDAOToUser(repository
                 .save(mapper.userToUserDAO(user)));
     }
 

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Kafka-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Kafka-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mailing-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Mailing-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Notebook-client.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Notebook-client.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Notebook-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Notebook-server.main.iml" />
     </modules>

@@ -18,8 +18,12 @@ public class NoteController {
     NoteService service;
 
     @GetMapping
-    public String getAllNotes(Model model){
-        model.addAttribute("notes", service.getAllNotes());
+    public String getAllNotes(Model model,
+        @RequestParam(value = "title", required = false) String title,
+        @RequestParam(value = "content", required = false) String content,
+        @RequestParam(required = false) Integer pageNumber,
+        @RequestParam(required = false) Integer pageSize){
+        model.addAttribute("notes", service.getAllNotes(title, content, pageNumber, pageSize));
         return "notes";
     }
 
@@ -48,10 +52,10 @@ public class NoteController {
         return new RedirectView("/notes");
     }
 
-    @DeleteMapping("/{id}")
-    public String deleteNote(Model model, @PathVariable UUID id){
+    @GetMapping("/delete/{id}")
+    public RedirectView deleteNote(Model model, @PathVariable UUID id){
         service.deleteNote(id);
-        return "redirect:/";
+        return new RedirectView("/notes");
     }
 
 }

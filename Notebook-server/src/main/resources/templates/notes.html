@@ -9,11 +9,21 @@
 
 <header class="d-flex pagetop">
     <div class="mr-auto p-2">
-        <h1>notes.<span style="color: black;">all notes</span></h1>
+        <h1>notes.<span style="color: black;"><a href="/notes">all notes</a></span></h1>
     </div>
-    <div class="p-2 move">
+    <form class="move row" method="get" action="/notes">
+        <div class="p-2 col col-search">
+            <input type="text" class="search-field" placeholder="Search content" name="content"></input>
+        </div>
+        <div class="col col-btn">
+            <a th:href="'/notes/new'">
+                <input class="btn search-btn" type="submit" value=&#128269></input>
+            </a>
+        </div>
+    </form>
+    <div class="p-2">
         <a th:href="'/notes/new'">
-            <input class="btn" type="submit" value="new note"></input>
+            <input class="btn" type="submit" value="new"></input>
         </a>
     </div>
     <div class="p-2">
@@ -31,20 +41,21 @@
             <th class="w-50">Title</th>
             <th>Created</th>
             <th>Updated</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
         <tr th:if="${#lists.isEmpty(notes)}">
-            <td class="text-center" colspan="4">No Notes yet.</td>
+            <td class="text-center" colspan="4">No Notes found.</td>
         </tr>
         <tr th:each="note : ${notes}">
-            <td><a th:href="'/notes/' + ${note.id}">
+            <td>
+                <a th:href="'/notes/' + ${note.id}">
                 <span th:text="${note.title}"></span>
-            </a>
+                </a>
             </td>
 
-            <td class="align-middle" th:text="${#temporals.format(note.created, 'yyyy-MM-dd HH:mm:ss')}">2023-03-03
-            </td>
+            <td class="align-middle" th:text="${#temporals.format(note.created, 'yyyy-MM-dd HH:mm:ss')}"></td>
 
             <td class="align-middle">
                 <th:block th:unless="${((#temporals.format(note.created, 'yyyy-MM-dd HH:mm:ss')) ==
@@ -56,14 +67,42 @@
                     <span th:text="'-'"></span>
                 </th:block>
             </td>
+            <td>
+                <a th:href="'/notes/delete/' + ${note.id}">&#128465</a>
+            </td>
         </tr>
         </tbody>
     </table>
+
+    <div style="text-align: center" class="table-nav">
+        <th:block th:unless="${((notes.getNumberOfElements()) < (notes.getPageable().getPageSize())) &&
+        not(notes.getPageable().getPageNumber()+1 == notes.getTotalPages())}">
+        <div>
+            <th:block th:if="${notes.hasPrevious()}" >
+                <a th:href="'/notes?pageSize=' + ${notes.getPageable().getPageSize()}
+                            + '&pageNumber=0'"> <<< </a> &nbsp
+                <a th:href="'/notes?pageSize=' + ${notes.getPageable().getPageSize()}
+                            + '&pageNumber=' + ${notes.getPageable().getPageNumber()}"> < </a>
+            </th:block>
+
+            <span th:text="${notes.getPageable().getPageNumber()+1}"></span>
+            / <span th:text="${notes.getTotalPages()}"></span>
+
+            <th:block th:if="${notes.hasNext()}">
+                <a th:href="'/notes?pageSize=' + ${notes.getPageable().getPageSize()}
+                            + '&pageNumber=' + ${notes.getPageable().getPageNumber()+2}"> > </a> &nbsp
+                <a th:href="'/notes?pageSize=' + ${notes.getPageable().getPageSize()}
+                            + '&pageNumber=' + ${notes.getTotalPages()}"> >>> </a>
+            </th:block>
+
+        </div>
+        </th:block>
+    </div>
 </div>
 </body>
 
 <footer>
-    End of page
+    Total notes: <th:block th:text="${ notes.getNumberOfElements()}"></th:block>
 </footer>
 
 </html>
