@@ -34,7 +34,7 @@ public class SendMailServiceImpl implements SendMailService {
 
         SimpleMailMessage msg = new SimpleMailMessage();
         msg.setFrom(senderEmail);
-        msg.setTo(mail.getRecipient(), mail.getRecipient());
+        msg.setTo(mail.getRecipient());
         msg.setSubject(mail.getSubject());
         msg.setText(mail.getMessage());
 
@@ -53,15 +53,15 @@ public class SendMailServiceImpl implements SendMailService {
         helper.setTo(mail.getRecipient());
         helper.setSubject(mail.getSubject());
         helper.setText(mail.getMessage() + "\nFind the attached image", true);
-        helper.addAttachment("403.jpg", new ClassPathResource("static/love-bunny.gif"));
+        helper.addAttachment("403.jpg", new ClassPathResource("static/403.jpg"));
 
         javaMailSender.send(msg);
-        logger.info(LocalDateTime.now() + " - email WITH picture sent to : " + mail.getRecipient() + " with subject : "
+        logger.info(LocalDateTime.now() + " - email with picture sent to : " + mail.getRecipient() + " with subject : "
                 + mail.getSubject() + ", and body : " + mail.getMessage());
     }
 
     @Override
-    public void sendEmailOnNewNote(Mail mail) throws MessagingException{
+    public void sendEmailOnNewNote(Mail mail) {
         SimpleMailMessage msg = new SimpleMailMessage();
         msg.setTo(mail.getRecipient());
         msg.setSubject("New note");

@@ -2,6 +2,7 @@ package pro.vaidas.notebookclient.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
@@ -19,6 +20,8 @@ import java.util.UUID;
 public class NoteClientImpl implements NoteClient {
 
     private final RestTemplateBuilder restTemplateBuilder;
+//    RestTemplate restTemplate = restTemplateBuilder.build();
+
     private static final String NOTES_PATH = "/api/v1/notes";
     private static final String NOTES_PATH_BY_ID = "/api/v1/notes/{id}";
 
@@ -36,11 +39,14 @@ public class NoteClientImpl implements NoteClient {
     }
 
     @Override
+    @LoadBalanced
     public Note getNoteById(UUID id) {
         RestTemplate restTemplate = restTemplateBuilder.build();
         ResponseEntity<Note> response = restTemplate.getForEntity(NOTES_PATH_BY_ID, Note.class, id);
+        System.out.println("Response Received as " + response);
            return response.getBody();
     }
+
 
     @Override
     public HttpStatus addNote(Note note) {

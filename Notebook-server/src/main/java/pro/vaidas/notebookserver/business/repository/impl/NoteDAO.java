@@ -37,8 +37,6 @@ public class NoteDAO {
     @NotNull
     private String title;
 
-//    @Lob
-//    @Basic(fetch=LAZY)
     @Column(length = 16000)
     private String content;
 
@@ -47,10 +45,4 @@ public class NoteDAO {
 
     @UpdateTimestamp
     private LocalDateTime updated;
-
-//    @PrePersist
-//    protected void prePersist() {
-//        if (created == null) created = LocalDateTime.now();
-//        updated = LocalDateTime.now();
-//    }
 }

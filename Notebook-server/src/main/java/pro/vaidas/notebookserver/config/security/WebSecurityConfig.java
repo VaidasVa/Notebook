@@ -3,28 +3,29 @@ package pro.vaidas.notebookserver.config.security;
 //@Configuration
 //@EnableWebSecurity
 //public class WebSecurityConfig  {
-
+//
 //    @Autowired
-//    private UserDetailsService userDetailsService;
+//    private UserDetailsService service;
 //
 //    @Autowired
 //    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.userDetailsService(userDetailsService)
+//        auth.userDetailsService(service)
 //                .passwordEncoder(passwordEncoder());
 //    }
-
 //
 //    @Bean
 //    protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 //        http
-//                .csrf().ignoringRequestMatchers("/api/**")
-//                .and()
+//
+//                .csrf().disable()
+////                .csrf().ignoringRequestMatchers("/api/**")
+////                .and()
 //                .authorizeHttpRequests()
 //                .requestMatchers("/", "/register").permitAll()
 //                .requestMatchers("/resources**", "/resources/static**").permitAll()
 //                .requestMatchers("/notes", "/notes/**").permitAll()
 ////                .requestMatchers("/api**").authenticated()
-//                .requestMatchers("/api/v1/**").permitAll()
+////                .requestMatchers("/api/v1/**").permitAll()
 //                .anyRequest().authenticated()
 //                .and()
 //                .formLogin()
@@ -43,12 +44,11 @@ package pro.vaidas.notebookserver.config.security;
 //                .exceptionHandling()
 //                .accessDeniedPage("/no")
 //                .and()
-//                .csrf().disable()
-//                .and().oauth2ResourceServer().jwt();
+//                .oauth2ResourceServer().jwt();
 //
 //        return http.build();
 //    }
-
+//
 //    @Bean
 //    public static PasswordEncoder passwordEncoder(){
 //        return PasswordEncoderFactories.createDelegatingPasswordEncoder();

@@ -21,7 +21,7 @@ public class EmailController {
         this.service = service;
     }
 
-    @PostMapping("/send")
+    @PostMapping(value="/send", consumes = "application/json")
     public ResponseEntity<String> sendMail(@RequestBody Mail mail) {
         service.sendMail(mail);
         return new ResponseEntity<>("Email Sent successfully", HttpStatus.OK);

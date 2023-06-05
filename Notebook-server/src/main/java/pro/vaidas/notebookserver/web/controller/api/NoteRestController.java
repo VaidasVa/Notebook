@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,7 +35,7 @@ public class NoteRestController {
     }
 
     @GetMapping("/{id}")
-    public Note getNoteById(Model model, @PathVariable UUID id) {
+    public Note getNoteById(@PathVariable UUID id) {
         Note note = service.getNoteById(id);
         return service.getNoteById(id);
     }
