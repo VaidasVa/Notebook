@@ -27,8 +27,8 @@ public class RoleDAO  {
     @Column(nullable = false)
     private Integer id;
 
-    @Column(columnDefinition = "varchar(255) default 'USER'")
-    private String role = "USER";
+    @Column
+    private String role ;
 
     @JdbcTypeCode(SqlTypes.CHAR)
     @Column(length = 36, columnDefinition = "varchar(36)")

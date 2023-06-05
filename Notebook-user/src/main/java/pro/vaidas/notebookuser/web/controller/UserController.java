@@ -4,6 +4,7 @@ import jakarta.validation.constraints.NotEmpty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,9 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pro.vaidas.notebookuser.model.Mail;
+import pro.vaidas.notebookuser.model.KafkaMessageFromUser;
 import pro.vaidas.notebookuser.model.User;
-import pro.vaidas.notebookuser.service.MailingService;
 import pro.vaidas.notebookuser.service.UserService;
 
 import java.io.IOException;
@@ -30,7 +30,9 @@ public class UserController {
     private UserService service;
 
     @Autowired
-    private MailingService mailer;
+    private KafkaTemplate<String, KafkaMessageFromUser> kafka;
+
+    private static final String TOPIC = "NotebookUserServiceTopic";
 
     @GetMapping("/add")
     public void addUsers(){
@@ -48,16 +50,16 @@ public class UserController {
         Optional<User> user = service.getUserById(id);
         if (user.isPresent()){
         return new ResponseEntity<>(user, HttpStatus.OK);}
-        else {return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);}
+        else {return new ResponseEntity<>(HttpStatus.NOT_FOUND);}
     }
 
     @GetMapping("/email/{email}")
     public ResponseEntity<Optional<User>> getUserByEmail(@PathVariable @NotEmpty String email) {
         Optional<User> result = service.findUserByEmail(email);
         if (result.isPresent()) {
-            return new ResponseEntity<>((result), HttpStatus.OK);
+            return new ResponseEntity<>(result, HttpStatus.OK);
         } else {
-            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
@@ -71,7 +73,7 @@ public class UserController {
     }
 
     @PostMapping("/")
-    public ResponseEntity<String> postUser(@RequestBody User user) throws IOException, URISyntaxException {
+    public ResponseEntity<String> postUser(@RequestBody User user) throws IOException, URISyntaxException, InterruptedException {
         if (service.userExistsByEmail(user.getEmail())) {
             return new ResponseEntity<>("This email is already registered", HttpStatus.BAD_REQUEST);
         }
@@ -82,15 +84,19 @@ public class UserController {
         } else if (user.getPassword() == null) {
             return new ResponseEntity<>("Password is mandatory", HttpStatus.BAD_REQUEST);
         } else {
-            String response = mailer.sendEmail(new Mail(user.getEmail(), "New user", "New user"));
             service.saveUser(user);
-            return new ResponseEntity<>("User saved, " + response, HttpStatus.CREATED);
+            kafka.send(TOPIC, service.makeKafkaUser(user, "newUser"));
+            return new ResponseEntity<>("User saved, ", HttpStatus.CREATED);
         }
     }
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteUser(@PathVariable UUID id){
-        service.deleteUser(id);
-        return new ResponseEntity<>("Deleted.", HttpStatus.NO_CONTENT);
+        if (service.getUserById(id).isPresent()) {
+            service.deleteUser(id);
+            return new ResponseEntity<>("Deleted.", HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity<>("User not found, nothing to delete.", HttpStatus.NOT_FOUND);
+        }
     }
 }

@@ -11,5 +11,4 @@ public interface RoleService {
 
     List<Role> getRoleByUserId(UUID id);
 
-    void deleteRole(Integer id);
 }

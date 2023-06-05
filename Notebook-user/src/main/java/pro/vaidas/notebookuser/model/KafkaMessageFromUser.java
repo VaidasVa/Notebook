@@ -9,8 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Builder
-public class Mail {
-    private String recipient;
-    private String subject;
-    private String message;
+public class KafkaMessageFromUser {
+
+    private String email;
+    private String name;
+    private String eventType;
 }
+

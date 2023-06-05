@@ -5,12 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="388938fa-49f7-482a-a9b9-f2d464d23d25" name="Changes" comment="OAuth2 server impl">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/config/KafkaConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/model/MessageFromKafka.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/config/KafkaProducerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/config/KafkaTopicConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/model/KafkaMessageFromUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/593036c9-fe26-4f8a-a76e-88989fd8b5d5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/593036c9-fe26-4f8a-a76e-88989fd8b5d5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auth-server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafka-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mailing-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/resources/static/love-bunny.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mailing-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/model/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/model/Mail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/service/SendMailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/service/SendMailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/NotebookServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/NotebookServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/NotebookUserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/NotebookUserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/model/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/model/Mail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/repository/impl/RoleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/repository/impl/RoleDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/repository/impl/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/repository/impl/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/web/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +185,7 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.14456719",
+    "project.structure.side.proportion": "0.35142595",
     "settings.editor.selected.configurable": "swagger",
     "spring.configuration.checksum": "60ec5539ead12f017302abf18d2ac294"
   },
@@ -222,7 +244,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.NotebookUserApplication">
+  <component name="RunManager" selected="Spring Boot.MailingServiceApplication">
     <configuration name="Mailing-service [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -413,7 +435,8 @@
       <workItem from="1685776035773" duration="109000" />
       <workItem from="1685776154878" duration="38902000" />
       <workItem from="1685879679898" duration="32000" />
-      <workItem from="1685879726955" duration="18131000" />
+      <workItem from="1685879726955" duration="35918000" />
+      <workItem from="1685974181857" duration="4882000" />
     </task>
     <task id="LOCAL-00001" summary="OAuth2 server impl">
       <created>1683708831809</created>
@@ -431,16 +454,17 @@
   <component name="UnknownFeatures">
     <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
     <option featureType="dependencySupport" implementationName="java:org.springframework.security:spring-security-core" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="application.properties" />
     <option featureType="dependencySupport" implementationName="java:org.apache.kafka:kafka_2.13" />
     <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
-    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
     <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
     <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
-    <option featureType="dependencySupport" implementationName="java:org.thymeleaf:thymeleaf" />
     <option featureType="dependencySupport" implementationName="java:org.apache.kafka:kafka-clients" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.thymeleaf:thymeleaf" />
     <option featureType="dependencySupport" implementationName="java:org.springframework:spring-messaging" />
     <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
-    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

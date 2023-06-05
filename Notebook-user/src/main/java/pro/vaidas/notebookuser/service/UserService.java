@@ -1,5 +1,6 @@
 package pro.vaidas.notebookuser.service;
 
+import pro.vaidas.notebookuser.model.KafkaMessageFromUser;
 import pro.vaidas.notebookuser.model.User;
 
 import java.io.IOException;
@@ -25,4 +26,6 @@ public interface UserService {
     String setDefaultUserRole();
 
     void deleteUser(UUID id);
+
+    KafkaMessageFromUser makeKafkaUser(User user, String event);
 }

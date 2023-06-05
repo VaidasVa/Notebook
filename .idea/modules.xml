@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Notebook-client.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Notebook-client.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Notebook-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Notebook-server.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Notebook-user.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Notebook-user.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notebook.iml" filepath="$PROJECT_DIR$/notebook.iml" />
     </modules>
   </component>
 </project>

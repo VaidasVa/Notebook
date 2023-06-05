@@ -1,14 +1,11 @@
 package pro.vaidas.mailingservice.service;
 
 import jakarta.mail.MessagingException;
-import jakarta.mail.internet.MimeMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 import pro.vaidas.mailingservice.model.Mail;
 
@@ -41,33 +38,35 @@ public class SendMailServiceImpl implements SendMailService {
         javaMailSender.send(msg);
         logger.info(LocalDateTime.now() + " - email sent to : " + mail.getRecipient() + " with subject : "
                 + mail.getSubject() + ", and body : " + mail.getMessage());
-    }
-
-    @Override
-    public void sendMailWithAttachments(Mail mail) throws MessagingException, UnsupportedEncodingException {
-        MimeMessage msg = javaMailSender.createMimeMessage();
-
-        MimeMessageHelper helper = new MimeMessageHelper(msg, true);
-        helper.setFrom(senderEmail, senderName);
-        helper.setBcc(senderEmail);
-        helper.setTo(mail.getRecipient());
-        helper.setSubject(mail.getSubject());
-        helper.setText(mail.getMessage() + "\nFind the attached image", true);
-        helper.addAttachment("403.jpg", new ClassPathResource("static/403.jpg"));
-
-        javaMailSender.send(msg);
-        logger.info(LocalDateTime.now() + " - email with picture sent to : " + mail.getRecipient() + " with subject : "
+        System.out.println(LocalDateTime.now() + " - email sent to : " + mail.getRecipient() + " with subject : "
                 + mail.getSubject() + ", and body : " + mail.getMessage());
     }
 
     @Override
-    public void sendEmailOnNewNote(Mail mail) {
-        SimpleMailMessage msg = new SimpleMailMessage();
-        msg.setTo(mail.getRecipient());
-        msg.setSubject("New note");
-        msg.setText("A new note has been created");
+    public void sendMailWithAttachments(Mail mail) throws MessagingException, UnsupportedEncodingException {
+//        MimeMessage msg = javaMailSender.createMimeMessage();
+//
+//        MimeMessageHelper helper = new MimeMessageHelper(msg, true);
+//        helper.setFrom(senderEmail, senderName);
+//        helper.setBcc(senderEmail);
+//        helper.setTo(mail.getRecipient());
+//        helper.setSubject(mail.getSubject());
+//        helper.setText(mail.getMessage() + "\nFind the attached image", true);
+//        helper.addAttachment("403.jpg", new ClassPathResource("static/403.jpg"));
+//
+//        javaMailSender.send(msg);
+//        logger.info(LocalDateTime.now() + " - email with picture sent to : " + mail.getRecipient() + " with subject : "
+//                + mail.getSubject() + ", and body : " + mail.getMessage());
+    }
 
-        javaMailSender.send(msg);
-        logger.info(LocalDateTime.now() + " - email sent to : " + mail.getRecipient() + " because new note was created");
+    @Override
+    public void sendEmailOnNewNote(Mail mail) {
+//        SimpleMailMessage msg = new SimpleMailMessage();
+//        msg.setTo(mail.getRecipient());
+//        msg.setSubject("New note");
+//        msg.setText("A new note has been created");
+//
+//        javaMailSender.send(msg);
+//        logger.info(LocalDateTime.now() + " - email sent to : " + mail.getRecipient() + " because new note was created");
     }
 }

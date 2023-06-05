@@ -36,9 +36,4 @@ public class RoleServiceImpl implements RoleService {
                 .map(found -> mapper.roleDAOToRole(found))
                 .collect(Collectors.toList());
     }
-
-    @Override
-    public void deleteRole(Integer id){
-        repository.deleteById(id);
-    }
 }

@@ -31,7 +31,7 @@ dependencies {
 
     implementation group: 'com.opencsv', name: 'opencsv', version: '5.7.1'
 
-//    implementation 'org.springframework.boot:spring-boot-dependencies:3.1.0'
+    implementation 'org.springframework.cloud:spring-cloud-dependencies:2022.0.3'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.0.2'
 
 //    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '3.0.6'
