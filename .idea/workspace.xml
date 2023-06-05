@@ -5,54 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="388938fa-49f7-482a-a9b9-f2d464d23d25" name="Changes" comment="OAuth2 server impl">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/Notebook-user.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/bootstrap/AddUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/config/RestTemplateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/mapper/RoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/model/Mail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/repository/impl/RoleDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/repository/impl/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/MailingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/MailingServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/web/controller/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/web/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/131f5f06-9538-4f3b-b102-3eaa7b4651ce.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/131f5f06-9538-4f3b-b102-3eaa7b4651ce.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/64b1d253-fd75-4314-a6e4-3cd2f691187e.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/64b1d253-fd75-4314-a6e4-3cd2f691187e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/64b1d253-fd75-4314-a6e4-3cd2f691187e/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/64b1d253-fd75-4314-a6e4-3cd2f691187e/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auth-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mailing-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/controller/EmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/controller/EmailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/service/SendMailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/service/SendMailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/config/OAuthClientInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/config/RestTemplateBuilderConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/config/RestTemplateBuilderConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/service/NoteClientImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/service/NoteClientImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/NotebookServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/NotebookServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/repository/impl/NoteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/repository/impl/NoteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/config/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/config/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/api/NoteRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/api/NoteRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mailing-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/resources/static/love-bunny.gif" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -455,7 +413,7 @@
       <workItem from="1685776035773" duration="109000" />
       <workItem from="1685776154878" duration="38902000" />
       <workItem from="1685879679898" duration="32000" />
-      <workItem from="1685879726955" duration="16527000" />
+      <workItem from="1685879726955" duration="18131000" />
     </task>
     <task id="LOCAL-00001" summary="OAuth2 server impl">
       <created>1683708831809</created>
