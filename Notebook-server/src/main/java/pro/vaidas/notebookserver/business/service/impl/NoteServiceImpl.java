@@ -12,6 +12,7 @@ import pro.vaidas.notebookserver.business.mappers.NoteMapper;
 import pro.vaidas.notebookserver.business.repository.NoteRepository;
 import pro.vaidas.notebookserver.business.repository.impl.NoteDAO;
 import pro.vaidas.notebookserver.business.service.NoteService;
+import pro.vaidas.notebookserver.model.KafkaMessage;
 import pro.vaidas.notebookserver.model.Note;
 
 import java.time.LocalDateTime;
@@ -24,10 +25,14 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Service
 @AllArgsConstructor
+//@Slf4j
 public class NoteServiceImpl implements NoteService {
 
     private final NoteRepository repository;
     private final NoteMapper mapper;
+
+//    private static final Logger logger = LogManager.getLogger(NoteServiceImpl.class);
+
 
     private static final int DEFAULT_PAGE = 0;
     private static final int DEFAULT_PAGE_SIZE = 20;
@@ -97,6 +102,7 @@ public class NoteServiceImpl implements NoteService {
     public void addNote(Note note){
         mapper.noteDAOToNote(repository
                 .save(mapper.noteToNoteDAO(note)));
+//        logger.info("New note created : " + note.getTitle() + " - on : " + LocalDateTime.now());
     }
 
     @Override
@@ -126,6 +132,15 @@ public class NoteServiceImpl implements NoteService {
     @Override
     public void deleteNote(UUID id){
         repository.deleteById(id);
+    }
+
+    @Override
+    public KafkaMessage makeKafkaNote(Note note, String event) {
+        return KafkaMessage.builder()
+                .name(note.getTitle())
+                .email("notebookmailer@gmail.com")
+                .eventType(event)
+                .build();
     }
 
 }

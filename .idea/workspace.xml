@@ -5,34 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="388938fa-49f7-482a-a9b9-f2d464d23d25" name="Changes" comment="OAuth2 server impl">
-      <change afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/config/KafkaConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/model/MessageFromKafka.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/config/KafkaProducerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/config/KafkaTopicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/model/KafkaMessageFromUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mailing-service/src/main/resources/static/mat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mailing-service/src/main/resources/templates/newUserEmail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/config/KafkaProducerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/model/KafkaMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/593036c9-fe26-4f8a-a76e-88989fd8b5d5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/593036c9-fe26-4f8a-a76e-88989fd8b5d5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafka-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/src/main/java/pro/vaidas/kafkaservice/KafkaServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/src/main/java/pro/vaidas/kafkaservice/config/Producer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/src/main/java/pro/vaidas/kafkaservice/model/Quote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/src/main/resources/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-service/src/test/java/pro/vaidas/kafkaservice/KafkaServiceApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Mailing-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/model/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/model/Mail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/service/SendMailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/service/SendMailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/config/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/config/KafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/config/KafkaConsumerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/controller/EmailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/model/MessageFromKafka.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/model/ReceivedKafkaMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/service/SendMailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/service/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/service/SendMailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/src/main/java/pro/vaidas/mailingservice/service/EmailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mailing-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Mailing-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebook-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/NotebookServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/NotebookServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/service/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/service/NoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/service/impl/NoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/business/service/impl/NoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/NoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/api/NoteRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/api/NoteRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-user/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/NotebookUserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/NotebookUserApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/model/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/model/Mail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/repository/impl/RoleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/repository/impl/RoleDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/repository/impl/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/repository/impl/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/config/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/config/KafkaProducerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/MailingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/MailingServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/web/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/web/controller/RoleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/web/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,11 +136,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JUnit5 Test Class" />
         <option value="Record" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -160,41 +174,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "dev",
-    "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "/Users/vaidas/Desktop/Files/Programming/GitHub/Notebook/Mailing-service/src/main/resources/static",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.35142595",
-    "settings.editor.selected.configurable": "swagger",
-    "spring.configuration.checksum": "60ec5539ead12f017302abf18d2ac294"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vaidas/Desktop/Files/Programming/GitHub/Notebook/Mailing-service/src/main/resources/static&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.35142595&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;92883042ccebd37ca76c99b0be8bb3c7&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -232,6 +246,8 @@
       <recent name="pro.vaidas.notebookserver.web.controller.api" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pro.vaidas.mailingservice.model" />
+      <recent name="pro.vaidas.notebookserver.config" />
       <recent name="pro.vaidas.notebookuser.model" />
       <recent name="pro.vaidas.notebookserver.config.kafka" />
       <recent name="pro.vaidas.kafkaservice.impl" />
@@ -311,12 +327,6 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration name="AuthServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Auth-server.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pro.vaidas.authserver.AuthServerApplication" />
@@ -332,13 +342,6 @@
         <option name="region" />
         <option name="useCurrentConnection" value="false" />
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KafkaServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="Kafka-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="pro.vaidas.kafkaservice.KafkaServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -385,11 +388,8 @@
       <item itemvalue="Gradle.Mailing-service [build]" />
       <item itemvalue="Gradle.Mailing-service [buildDependents]" />
       <item itemvalue="Gradle.Mailing-service [clean]" />
-      <item itemvalue="HTTP Request.generated-requests | #3" />
-      <item itemvalue="HTTP Request.All in generated-requests" />
       <item itemvalue="Spring Boot.AuthServerApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
-      <item itemvalue="Spring Boot.KafkaServiceApplication" />
       <item itemvalue="Spring Boot.MailingServiceApplication" />
       <item itemvalue="Spring Boot.NotebookClientApplication" />
       <item itemvalue="Spring Boot.NotebookServerApplication" />
@@ -397,8 +397,6 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests | #3" />
-        <item itemvalue="HTTP Request.All in generated-requests" />
         <item itemvalue="Gradle.Mailing-service [clean]" />
         <item itemvalue="Gradle.Mailing-service [build]" />
         <item itemvalue="Gradle.Mailing-service [buildDependents]" />
@@ -436,7 +434,10 @@
       <workItem from="1685776154878" duration="38902000" />
       <workItem from="1685879679898" duration="32000" />
       <workItem from="1685879726955" duration="35918000" />
-      <workItem from="1685974181857" duration="4882000" />
+      <workItem from="1685974181857" duration="7124000" />
+      <workItem from="1686032111871" duration="9516000" />
+      <workItem from="1686043612417" duration="10867000" />
+      <workItem from="1686054816814" duration="5588000" />
     </task>
     <task id="LOCAL-00001" summary="OAuth2 server impl">
       <created>1683708831809</created>

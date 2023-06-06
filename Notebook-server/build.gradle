@@ -18,6 +18,7 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
@@ -28,6 +29,14 @@ dependencies {
     implementation group: 'com.mysql', name: 'mysql-connector-j', version: '8.0.33'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '3.0.6'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '3.0.6'
+
+//    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2', version: '3.1.0'
+//    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'
+
+    implementation 'org.springframework.kafka:spring-kafka'
+    implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '3.4.0'
+    implementation group: 'org.apache.zookeeper', name: 'zookeeper', version: '3.8.1'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.1'
 
     implementation group: 'com.opencsv', name: 'opencsv', version: '5.7.1'
 
@@ -42,6 +51,12 @@ dependencies {
 
     implementation 'org.mapstruct:mapstruct:1.5.5.Final'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+}
+
+configurations {
+    all {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
 }
 
 tasks.named('test') {

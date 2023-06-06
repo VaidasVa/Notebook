@@ -1,43 +1,28 @@
 package pro.vaidas.mailingservice.config;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.mail.MessagingException;
+import lombok.AllArgsConstructor;
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.support.KafkaHeaders;
+import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.stereotype.Component;
-import pro.vaidas.mailingservice.model.Mail;
-import pro.vaidas.mailingservice.model.MessageFromKafka;
-import pro.vaidas.mailingservice.service.SendMailService;
+import pro.vaidas.mailingservice.model.ReceivedKafkaMessage;
+import pro.vaidas.mailingservice.service.EmailService;
 
-import java.util.Objects;
+import java.io.IOException;
 
 @Component
+@AllArgsConstructor
 public class KafkaConsumer {
 
-    @Autowired
-    private SendMailService mailService;
+    private EmailService mailService;
 
-    @KafkaListener(topics = "NotebookUserServiceTopic",
-            groupId = "group_id")
-
-    // Method
-    public void
-    consume(String message) throws JsonProcessingException {
-        // Print statement
-        System.out.println("message = " + message);
-
+    @KafkaListener(topics = {"NotebookUserServiceTopic", "NotebookServerTopic"}, groupId = "notebook_group")
+    public void consume(String message, @Header(KafkaHeaders.RECEIVED_TOPIC) String topic) throws IOException, MessagingException {
         ObjectMapper mapper = new ObjectMapper();
-        MessageFromKafka msg = mapper.readValue(message, MessageFromKafka.class);
 
-        System.out.println(msg);
-
-        if (Objects.equals(msg.getEventType(), "newUser")){
-            Mail mail = Mail.builder()
-                    .recipient(msg.getEmail())
-                    .subject("User created in Notebook App")
-                    .message("Your user has been created.")
-                    .build();
-            mailService.sendMail(mail);
+                ReceivedKafkaMessage msg = mapper.readValue(message, ReceivedKafkaMessage.class);
+                mailService.sendMail(msg);
         }
     }
-}

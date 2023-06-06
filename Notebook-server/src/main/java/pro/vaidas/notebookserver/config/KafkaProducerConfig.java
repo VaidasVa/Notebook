@@ -1,4 +1,4 @@
-package pro.vaidas.notebookuser.config;
+package pro.vaidas.notebookserver.config;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
-import pro.vaidas.notebookuser.model.User;
 import org.springframework.kafka.support.serializer.JsonSerializer;
+import pro.vaidas.notebookserver.model.Note;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Map;
 @Configuration
 public class KafkaProducerConfig {
 
-    public ProducerFactory<String, User> producerFactory()
+    public ProducerFactory<String, Note> producerFactory()
     {
         Map<String, Object> config = new HashMap<>();
         config.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");

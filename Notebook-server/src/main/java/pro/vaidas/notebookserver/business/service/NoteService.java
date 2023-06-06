@@ -1,6 +1,7 @@
 package pro.vaidas.notebookserver.business.service;
 
 import org.springframework.data.domain.Page;
+import pro.vaidas.notebookserver.model.KafkaMessage;
 import pro.vaidas.notebookserver.model.Note;
 
 import java.util.UUID;
@@ -16,5 +17,7 @@ public interface NoteService {
     void updateNote(UUID id, Note note);
 
     void deleteNote(UUID id);
+
+    KafkaMessage makeKafkaNote(Note note, String event);
 
 }

@@ -27,5 +27,7 @@ public interface UserService {
 
     void deleteUser(UUID id);
 
+    void deleteByEmail(String email);
+
     KafkaMessageFromUser makeKafkaUser(User user, String event);
 }

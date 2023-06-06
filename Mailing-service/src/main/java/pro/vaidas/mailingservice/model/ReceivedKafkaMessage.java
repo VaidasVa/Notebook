@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class MessageFromKafka {
+public class ReceivedKafkaMessage {
     private String email;
     private String name;
     private String eventType;

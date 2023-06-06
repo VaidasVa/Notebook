@@ -28,14 +28,6 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/Kafka-service" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/Kafka-service" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Mailing-service" />
         <option name="modules">
           <set>

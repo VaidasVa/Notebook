@@ -20,7 +20,6 @@ public class RoleController {
     @Autowired
     private RoleService service;
 
-
     @GetMapping
     public ResponseEntity<List<Role>> getAllRoles(){
         List<Role> list = service.getAllRoles();

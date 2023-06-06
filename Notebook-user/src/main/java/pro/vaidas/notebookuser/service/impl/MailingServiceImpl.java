@@ -16,7 +16,6 @@ public class MailingServiceImpl implements MailingService {
     @Override
     public String sendEmail(Mail email) throws IOException {
 
-
         RestTemplate restTemplate = new RestTemplate();
         String url = "http://localhost:8084/api/v1/mail/send";
 

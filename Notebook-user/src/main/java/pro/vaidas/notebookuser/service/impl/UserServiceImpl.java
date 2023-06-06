@@ -87,7 +87,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void saveUser(User user) throws IOException, URISyntaxException {
-        // Without setting UUID here, the roles would not know which ID to set in joinCollumn
+        // Without setting UUID here, the roles would not know which ID to set in joinColumn
         user.setId(UUID.randomUUID());
         if (user.getRole().toString().toLowerCase().contains("admin")) {
             List<Role> list = new ArrayList<>();
@@ -115,6 +115,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public void deleteByEmail(String email) {
+        Optional<User> user = findUserByEmail(email);
+        user.ifPresent(foundUser -> repository.deleteById(foundUser.getId()));
+    }
+
+    @Override
     public KafkaMessageFromUser makeKafkaUser(User user, String event){
         return KafkaMessageFromUser.builder()
                 .email(user.getEmail())
@@ -122,5 +128,4 @@ public class UserServiceImpl implements UserService {
                 .eventType(event)
                 .build();
     }
-
 }

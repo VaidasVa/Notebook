@@ -90,13 +90,23 @@ public class UserController {
         }
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/delete/id/{id}")
     public ResponseEntity<String> deleteUser(@PathVariable UUID id){
         if (service.getUserById(id).isPresent()) {
             service.deleteUser(id);
             return new ResponseEntity<>("Deleted.", HttpStatus.NO_CONTENT);
         } else {
             return new ResponseEntity<>("User not found, nothing to delete.", HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @DeleteMapping("/delete/email/{email}")
+    public ResponseEntity<String> deleteUserByEmail(@PathVariable String email){
+        if (service.userExistsByEmail(email)){
+            service.deleteByEmail(email);
+            return new ResponseEntity<>("Deleted.", HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity<>("User not found by email, nothing to delete.", HttpStatus.NOT_FOUND);
         }
     }
 }

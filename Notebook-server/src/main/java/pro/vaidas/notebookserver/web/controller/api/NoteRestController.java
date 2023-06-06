@@ -1,9 +1,11 @@
 package pro.vaidas.notebookserver.web.controller.api;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import pro.vaidas.notebookserver.business.service.NoteService;
+import pro.vaidas.notebookserver.model.KafkaMessage;
 import pro.vaidas.notebookserver.model.Note;
 
 import java.util.UUID;
@@ -24,6 +27,11 @@ import java.util.UUID;
 public class NoteRestController {
 
     private final NoteService service;
+
+    @Autowired
+    private KafkaTemplate<String, KafkaMessage> kafka;
+
+    private String TOPIC = "NotebookServerTopic";
 
     @GetMapping
     public Page<Note> getAllNotes(
@@ -43,6 +51,7 @@ public class NoteRestController {
     @PostMapping
     public ResponseEntity postNote(@RequestBody Note note) {
         service.addNote(note);
+        kafka.send(TOPIC, service.makeKafkaNote(note, "newNote"));
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
