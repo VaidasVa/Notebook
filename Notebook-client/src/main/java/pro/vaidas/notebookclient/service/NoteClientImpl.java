@@ -1,6 +1,5 @@
 package pro.vaidas.notebookclient.service;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.core.ParameterizedTypeReference;
@@ -9,62 +8,63 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.util.UriComponentsBuilder;
 import pro.vaidas.notebookclient.model.Note;
+import pro.vaidas.notebookclient.wrapper.PageableResponse;
 
-import java.util.List;
 import java.util.UUID;
 
 @Service
-@RequiredArgsConstructor
 public class NoteClientImpl implements NoteClient {
 
-    private final RestTemplateBuilder restTemplateBuilder;
-//    RestTemplate restTemplate = restTemplateBuilder.build();
+    private final RestTemplate restTemplate;
 
     private static final String NOTES_PATH = "/api/v1/notes";
     private static final String NOTES_PATH_BY_ID = "/api/v1/notes/{id}";
 
+    public NoteClientImpl(RestTemplateBuilder restTemplateBuilder) {
+        this.restTemplate = restTemplateBuilder.build();
+    }
+
     @Override
-    public List<Note> getNotes() {
-        RestTemplate restTemplate = restTemplateBuilder.build();
+    public PageableResponse<Note> getNotes(String title, String content, Integer pageNumber, Integer pageSize) {
 
-        UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder.fromPath(NOTES_PATH);
+        String size, number, text;
 
-        ResponseEntity<List<Note>> response =
-                restTemplate.exchange(
-                        uriComponentsBuilder.toUriString(), HttpMethod.GET,null,
-                        new ParameterizedTypeReference<List<Note>>(){});
+        if (pageSize != null){ size = "pageSize="+pageSize;}
+        else {size = "";}
+        if (pageNumber != null) {number = "pageNumber="+pageNumber;}
+        else {number = "";}
+        if (content != null) { text = "content=" + content;}
+        else {text = "";}
+
+        String url = NOTES_PATH + "?" + size + "&" + number + "&" + text;
+
+        ResponseEntity<PageableResponse<Note>> response =
+                restTemplate.exchange((url), HttpMethod.GET, null,
+                        new ParameterizedTypeReference<>() {                        });
         return response.getBody();
     }
 
     @Override
     @LoadBalanced
     public Note getNoteById(UUID id) {
-        RestTemplate restTemplate = restTemplateBuilder.build();
         ResponseEntity<Note> response = restTemplate.getForEntity(NOTES_PATH_BY_ID, Note.class, id);
-        System.out.println("Response Received as " + response);
-           return response.getBody();
+        return response.getBody();
     }
-
 
     @Override
     public HttpStatus addNote(Note note) {
-        RestTemplate restTemplate = restTemplateBuilder.build();
         ResponseEntity<HttpStatus> response = restTemplate.postForEntity(NOTES_PATH, note, HttpStatus.class);
-        System.out.println(response);
         return response.getBody();
     }
 
     @Override
     public void updateNote(UUID id, Note note) {
-        RestTemplate restTemplate = restTemplateBuilder.build();
         restTemplate.put(NOTES_PATH_BY_ID, note, id);
     }
 
     @Override
     public void deleteNote(UUID id) {
-        RestTemplate restTemplate = restTemplateBuilder.build();
         restTemplate.delete(NOTES_PATH_BY_ID, id);
     }
 }

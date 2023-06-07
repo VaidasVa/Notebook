@@ -1,7 +1,5 @@
 package pro.vaidas.notebookserver.web.controller.api;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,16 +20,19 @@ import pro.vaidas.notebookserver.model.Note;
 import java.util.UUID;
 
 @RestController
-@RequiredArgsConstructor
 @RequestMapping("/api/v1/notes")
 public class NoteRestController {
 
     private final NoteService service;
 
-    @Autowired
-    private KafkaTemplate<String, KafkaMessage> kafka;
+    private final KafkaTemplate<String, KafkaMessage> kafka;
 
-    private String TOPIC = "NotebookServerTopic";
+    private final String TOPIC = "NotebookServerTopic";
+
+    public NoteRestController(NoteService service, KafkaTemplate<String, KafkaMessage> kafka) {
+        this.service = service;
+        this.kafka = kafka;
+    }
 
     @GetMapping
     public Page<Note> getAllNotes(
@@ -44,7 +45,6 @@ public class NoteRestController {
 
     @GetMapping("/{id}")
     public Note getNoteById(@PathVariable UUID id) {
-        Note note = service.getNoteById(id);
         return service.getNoteById(id);
     }
 

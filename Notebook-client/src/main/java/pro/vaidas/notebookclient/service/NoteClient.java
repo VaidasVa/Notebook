@@ -2,13 +2,13 @@ package pro.vaidas.notebookclient.service;
 
 import org.springframework.http.HttpStatus;
 import pro.vaidas.notebookclient.model.Note;
+import pro.vaidas.notebookclient.wrapper.PageableResponse;
 
-import java.util.List;
 import java.util.UUID;
 
 public interface NoteClient {
 
-    List<Note> getNotes();
+    PageableResponse<Note> getNotes(String title, String content, Integer pageNumber, Integer pageSize);
 
     Note getNoteById(UUID id);
 

@@ -25,7 +25,6 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Service
 @AllArgsConstructor
-//@Slf4j
 public class NoteServiceImpl implements NoteService {
 
     private final NoteRepository repository;
