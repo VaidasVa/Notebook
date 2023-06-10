@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="388938fa-49f7-482a-a9b9-f2d464d23d25" name="Changes" comment="OAuth2 server impl">
-      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/notesByUser.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/NoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/notes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ports.md" beforeDir="false" afterPath="$PROJECT_DIR$/Ports.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -574,7 +572,7 @@
       <workItem from="1686118381925" duration="42038000" />
       <workItem from="1686373931134" duration="3133000" />
       <workItem from="1686377079134" duration="6569000" />
-      <workItem from="1686383668552" duration="16267000" />
+      <workItem from="1686383668552" duration="16963000" />
     </task>
     <task id="LOCAL-00001" summary="OAuth2 server impl">
       <created>1683708831809</created>
