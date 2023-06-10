@@ -5,8 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.ResourceUtils;
-import pro.vaidas.notebookserver.business.repository.NoteRepository;
-import pro.vaidas.notebookserver.business.repository.impl.NoteDAO;
+import pro.vaidas.notebookserver.repository.NoteRepository;
+import pro.vaidas.notebookserver.repository.impl.NoteDAO;
 
 import java.io.File;
 import java.io.FileNotFoundException;

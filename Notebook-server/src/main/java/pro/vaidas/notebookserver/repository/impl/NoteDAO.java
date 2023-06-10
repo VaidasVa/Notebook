@@ -1,4 +1,4 @@
-package pro.vaidas.notebookserver.business.repository.impl;
+package pro.vaidas.notebookserver.repository.impl;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -39,6 +39,10 @@ public class NoteDAO {
 
     @Column(length = 16000)
     private String content;
+
+//    @JdbcTypeCode(SqlTypes.CHAR)
+//    @Column(length = 36, columnDefinition = "varchar(36)", updatable = false, nullable = false)
+    private String userUUID;
 
     @CreationTimestamp
     private LocalDateTime created;

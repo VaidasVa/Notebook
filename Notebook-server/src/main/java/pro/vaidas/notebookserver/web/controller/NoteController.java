@@ -1,6 +1,6 @@
 package pro.vaidas.notebookserver.web.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
-import pro.vaidas.notebookserver.business.service.NoteService;
+import pro.vaidas.notebookserver.service.NoteService;
 import pro.vaidas.notebookserver.model.KafkaMessage;
 import pro.vaidas.notebookserver.model.Note;
 
@@ -20,13 +20,15 @@ import java.util.UUID;
 @RequestMapping("/notes")
 public class NoteController {
 
-    @Autowired
-    NoteService service;
-
-    @Autowired
-    private KafkaTemplate<String, KafkaMessage> kafka;
+    private final NoteService service;
+    private final KafkaTemplate<String, KafkaMessage> kafka;
 
     private String TOPIC = "NotebookServerTopic";
+
+    public NoteController(NoteService service, KafkaTemplate<String, KafkaMessage> kafka) {
+        this.service = service;
+        this.kafka = kafka;
+    }
 
     @GetMapping
     public String getAllNotes(Model model,
@@ -34,7 +36,16 @@ public class NoteController {
         @RequestParam(value = "content", required = false) String content,
         @RequestParam(required = false) Integer pageNumber,
         @RequestParam(required = false) Integer pageSize){
-        model.addAttribute("notes", service.getAllNotes(title, content, pageNumber, pageSize));
+        model.addAttribute("notes", service.getAllNotes(content, pageNumber, pageSize));
+        return "notes";
+    }
+
+    @GetMapping("/user/{userUUID}")
+    public String getNotesByUserUUID(Model model,
+            @PathVariable(value = "userUUID") String userUUID,
+            @RequestParam(required = false) Integer pageNumber,
+            @RequestParam(required = false) Integer pageSize) {
+        model.addAttribute("notes", service.getNotesByUserId(userUUID, pageNumber, pageSize));
         return "notes";
     }
 

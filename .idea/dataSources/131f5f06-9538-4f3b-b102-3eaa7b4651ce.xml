@@ -1108,12 +1108,17 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DasType>datetime(6)|0s</DasType>
       <Position>5</Position>
     </column>
-    <index id="315" parent="309" name="PRIMARY">
+    <column id="315" parent="309" name="useruuid">
+      <DasType>varchar(36)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <index id="316" parent="309" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="316" parent="309" name="PRIMARY">
+    <key id="317" parent="309" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

@@ -20,13 +20,13 @@ public class Note {
 
     private UUID id;
 
-    @NotBlank
-    @NotNull
+//    @NotBlank
+//    @NotNull
     private String title;
 
     private String content;
+    private String userUUID;
     private LocalDateTime created;
     private LocalDateTime updated;
 
-    // todo add FK to connect to user
 }

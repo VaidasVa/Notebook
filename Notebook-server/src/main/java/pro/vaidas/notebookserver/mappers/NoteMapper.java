@@ -1,7 +1,7 @@
-package pro.vaidas.notebookserver.business.mappers;
+package pro.vaidas.notebookserver.mappers;
 
 import org.mapstruct.Mapper;
-import pro.vaidas.notebookserver.business.repository.impl.NoteDAO;
+import pro.vaidas.notebookserver.repository.impl.NoteDAO;
 import pro.vaidas.notebookserver.model.Note;
 
 @Mapper(componentModel = "spring")

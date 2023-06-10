@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import pro.vaidas.notebookserver.business.service.NoteService;
+import pro.vaidas.notebookserver.service.NoteService;
 import pro.vaidas.notebookserver.model.KafkaMessage;
 import pro.vaidas.notebookserver.model.Note;
 
@@ -36,11 +36,18 @@ public class NoteRestController {
 
     @GetMapping
     public Page<Note> getAllNotes(
-            @RequestParam(required = false) String title,
             @RequestParam(required = false) String content,
             @RequestParam(required = false) Integer pageNumber,
             @RequestParam(required = false) Integer pageSize) {
-            return service.getAllNotes(title, content, pageNumber, pageSize);
+            return service.getAllNotes(content, pageNumber, pageSize);
+    }
+
+    @GetMapping("/user/{userUUID}")
+    public Page<Note> getNotesByUserUUID(
+            @PathVariable(value = "userUUID") String userUUID,
+            @RequestParam(required = false) Integer pageNumber,
+            @RequestParam(required = false) Integer pageSize) {
+        return service.getNotesByUserId(userUUID, pageNumber, pageSize);
     }
 
     @GetMapping("/{id}")
