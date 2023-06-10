@@ -1,7 +1,6 @@
 package pro.vaidas.notebookuser.web.controller;
 
 import jakarta.validation.constraints.NotEmpty;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -26,13 +25,16 @@ import java.util.UUID;
 @RequestMapping("/api/v1/user")
 public class UserController {
 
-    @Autowired
-    private UserService service;
+    private final UserService service;
 
-    @Autowired
-    private KafkaTemplate<String, KafkaMessageFromUser> kafka;
+    private final KafkaTemplate<String, KafkaMessageFromUser> kafka;
 
     private static final String TOPIC = "NotebookUserServiceTopic";
+
+    public UserController(UserService service, KafkaTemplate<String, KafkaMessageFromUser> kafka) {
+        this.service = service;
+        this.kafka = kafka;
+    }
 
     @GetMapping("/add")
     public void addUsers(){
@@ -72,7 +74,7 @@ public class UserController {
         }
     }
 
-    @PostMapping("/")
+    @PostMapping("/post")
     public ResponseEntity<String> postUser(@RequestBody User user) throws IOException, URISyntaxException, InterruptedException {
         if (service.userExistsByEmail(user.getEmail())) {
             return new ResponseEntity<>("This email is already registered", HttpStatus.BAD_REQUEST);
@@ -85,7 +87,9 @@ public class UserController {
             return new ResponseEntity<>("Password is mandatory", HttpStatus.BAD_REQUEST);
         } else {
             service.saveUser(user);
+            System.out.println("----- User saved");
             kafka.send(TOPIC, service.makeKafkaUser(user, "newUser"));
+            System.out.println("----- Sent to kafka");
             return new ResponseEntity<>("User saved, ", HttpStatus.CREATED);
         }
     }
@@ -109,4 +113,6 @@ public class UserController {
             return new ResponseEntity<>("User not found by email, nothing to delete.", HttpStatus.NOT_FOUND);
         }
     }
+
+
 }

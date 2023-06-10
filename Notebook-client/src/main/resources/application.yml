@@ -1,0 +1,42 @@
+server:
+  port: 8081
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+  application:
+    name: NotebookAPIClient
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  datasource:
+    url: jdbc:mysql://localhost:3306/notebook
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+
+myapp:
+  rootUrl: http://localhost:8080
+
+logging:
+  level:
+    org:
+      springframework:
+        security: WARN
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost

@@ -5,6 +5,7 @@ import jakarta.mail.internet.MimeMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.mail.MailException;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
@@ -60,6 +61,5 @@ public class EmailServiceImpl implements EmailService {
         javaMailSender.send(mimeMessage);
 
         logger.info(LocalDateTime.now() + " - email sent to : " + msg.getEmail() + ", message : " + mimeMessage.getContent());
-        System.out.println(LocalDateTime.now() + " - email sent to : " + msg.getEmail() + ", message : " + mimeMessage.getContent());
     }
 }

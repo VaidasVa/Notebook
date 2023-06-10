@@ -1,48 +1,38 @@
 package pro.vaidas.notebookuser.service.impl;
 
-import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pro.vaidas.notebookuser.bootstrap.AddUser;
 import pro.vaidas.notebookuser.mapper.UserMapper;
 import pro.vaidas.notebookuser.model.KafkaMessageFromUser;
 import pro.vaidas.notebookuser.model.Role;
 import pro.vaidas.notebookuser.model.User;
 import pro.vaidas.notebookuser.repository.UserRepository;
-import pro.vaidas.notebookuser.service.MailingService;
 import pro.vaidas.notebookuser.service.RoleService;
 import pro.vaidas.notebookuser.service.UserService;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Random;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-@Data
 public class UserServiceImpl implements UserService {
 
-    @Autowired
     private final UserRepository repository;
+//    private final MailingService mail;
+    private final UserMapper mapper;
+    private final RoleService roleService;
 
-    @Autowired
-    private MailingService mail;
+//    private AddUser addUser;
 
-    @Autowired
-    private UserMapper mapper;
-
-    @Autowired
-    private RoleService roleService;
-
-    private AddUser addUser;
+    public UserServiceImpl(UserRepository repository,  UserMapper mapper, RoleService roleService) {
+        this.repository = repository;
+        this.mapper = mapper;
+        this.roleService = roleService;
+    }
 
     @Override
     public void addUsers() {
-        addUser.addNewUsersIfEmpty();
+//        addUser.addNewUsersIfEmpty();
     }
 
     @Override
@@ -62,7 +52,7 @@ public class UserServiceImpl implements UserService {
     public Optional<User> findUserByEmail(String email) {
         List<User> list = repository.findByEmail(email)
                 .stream()
-                .map(found -> mapper.userDAOToUser(found))
+                .map(mapper::userDAOToUser)
                 .toList();
 
         User user;
@@ -79,7 +69,6 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-
     @Override
     public Boolean userExistsByEmail(String email) {
         return !repository.findByEmail(email).isEmpty();
@@ -89,7 +78,7 @@ public class UserServiceImpl implements UserService {
     public void saveUser(User user) throws IOException, URISyntaxException {
         // Without setting UUID here, the roles would not know which ID to set in joinColumn
         user.setId(UUID.randomUUID());
-        if (user.getRole().toString().toLowerCase().contains("admin")) {
+        if (!user.getRole().isEmpty() && user.getRole().toString().toLowerCase().contains("admin")) {
             List<Role> list = new ArrayList<>();
             list.add(Role.builder().id(new Random().nextInt()).role("ADMIN").build());
             user.setRole(list);
@@ -100,6 +89,7 @@ public class UserServiceImpl implements UserService {
             List<Role> list = new ArrayList<>();
             list.add(Role.builder().id(new Random().nextInt()).role("USER").build());
             user.setRole(list);
+            user.setActivated(false);
             repository.save(mapper.userToUserDAO(user));
         }
     }

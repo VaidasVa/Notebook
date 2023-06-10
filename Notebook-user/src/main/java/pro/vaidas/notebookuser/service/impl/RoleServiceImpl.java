@@ -1,6 +1,5 @@
 package pro.vaidas.notebookuser.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pro.vaidas.notebookuser.mapper.RoleMapper;
 import pro.vaidas.notebookuser.model.Role;
@@ -14,11 +13,13 @@ import java.util.stream.Collectors;
 @Service
 public class RoleServiceImpl implements RoleService {
 
-    @Autowired
-    private  RoleRepository repository;
+    private final RoleRepository repository;
+    private final RoleMapper mapper;
 
-    @Autowired
-    private RoleMapper mapper;
+    public RoleServiceImpl(RoleRepository repository, RoleMapper mapper) {
+        this.repository = repository;
+        this.mapper = mapper;
+    }
 
     @Override
     public List<Role> getAllRoles() {
@@ -33,7 +34,7 @@ public class RoleServiceImpl implements RoleService {
         System.out.println("In service : " + repository.findByUser(id.toString()));
         return repository.findByUser(id.toString())
                 .stream()
-                .map(found -> mapper.roleDAOToRole(found))
+                .map(mapper::roleDAOToRole)
                 .collect(Collectors.toList());
     }
 }

@@ -1,0 +1,36 @@
+{
+  "content": [
+    {
+      "id": "2b86a253-1fb3-4c42-94f2-040a71fe06e9",
+      "title": "a",
+      "content": "",
+      "created": "2023-06-07T14:21:53.211067",
+      "updated": "2023-06-07T14:21:53.211118"
+    }
+  ],
+  "pageable": {
+    "sort": {
+      "empty": false,
+      "sorted": true,
+      "unsorted": false
+    },
+    "offset": 0,
+    "pageNumber": 0,
+    "pageSize": 1,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalPages": 196,
+  "totalElements": 196,
+  "last": false,
+  "size": 1,
+  "number": 0,
+  "sort": {
+    "empty": false,
+    "sorted": true,
+    "unsorted": false
+  },
+  "numberOfElements": 1,
+  "first": true,
+  "empty": false
+}

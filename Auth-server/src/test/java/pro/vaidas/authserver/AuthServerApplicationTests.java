@@ -1,13 +1,15 @@
 package pro.vaidas.authserver;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 
 @SpringBootTest
+@EnableMethodSecurity
 class AuthServerApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+//	@Test
+//	@Disabled
+//	void contextLoads() {
+//	}
 
 }

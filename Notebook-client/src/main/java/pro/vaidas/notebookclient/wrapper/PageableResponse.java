@@ -15,10 +15,6 @@ import java.util.List;
 @Setter
 @Getter
 public class PageableResponse<T> extends PageImpl<T> {
-//    private Boolean first;
-//    private Boolean last;
-//    private int totalPages;
-//    private int numberOfElements;
 
     @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
     public PageableResponse(
@@ -35,24 +31,7 @@ public class PageableResponse<T> extends PageImpl<T> {
 
         super(content, PageRequest.of(number, size), totalElements);
     }
-
-    public PageableResponse(List<T> content, Pageable pageable, long total) {
-        super(content, pageable, total);
-    }
-
-    public PageableResponse(List<T> content) {
-        super(content);
-    }
-
-    public PageableResponse() {
-        super(new ArrayList<>());
-    }
-
-//        this.last = last;
-//        this.first = first;
-//        this.totalPages = totalPages;
-//        this.numberOfElements = numberOfElements;
-    }
+}
 
 
 
