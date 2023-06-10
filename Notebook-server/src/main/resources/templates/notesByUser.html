@@ -35,6 +35,9 @@
 
 <body>
 <div class="container">
+
+
+
     <table class="table table-hover">
         <thead class="thead-dark">
         <tr class="table-titles">
@@ -51,7 +54,7 @@
         <tr th:each="note : ${notes}">
             <td>
                 <a th:href="'/notes/' + ${note.id}">
-                <span th:text="${note.title}"></span>
+                    <span th:text="${note.title}"></span>
                 </a>
             </td>
 
@@ -74,28 +77,34 @@
         </tbody>
     </table>
 
+
+<!--    <div th:with="first=${notes.getContent().get(0)}">-->
+<!--        <span  th:text="${first.userUUID}">-->
+
+<!--        </span></div>-->
+
     <div style="text-align: center" class="table-nav">
         <th:block th:unless="${((notes.getNumberOfElements()) < (notes.getPageable().getPageSize())) &&
         not(notes.getPageable().getPageNumber()+1 == notes.getTotalPages())}">
-        <div>
-            <th:block th:if="${notes.hasPrevious()}" >
-                <a th:href="'/notes?pageSize=' + ${notes.getPageable().getPageSize()}
+            <div th:with="first=${notes.getContent().get(0)}">
+                <th:block th:if="${notes.hasPrevious()}" >
+                    <a th:href="'/notes/user/'+ ${first.userUUID} +'?pageSize=' + ${notes.getPageable().getPageSize()}
                             + '&pageNumber=0'"> <<< </a> &nbsp
-                <a th:href="'/notes?pageSize=' + ${notes.getPageable().getPageSize()}
+                    <a th:href="'/notes/user/'+${first.userUUID}+'?pageSize=' + ${notes.getPageable().getPageSize()}
                             + '&pageNumber=' + ${notes.getPageable().getPageNumber()}"> < </a>
-            </th:block>
+                </th:block>
 
-            <span th:text="${notes.getPageable().getPageNumber()+1}"></span>
-            / <span th:text="${notes.getTotalPages()}"></span>
+                <span th:text="${notes.getPageable().getPageNumber()+1}"></span>
+                / <span th:text="${notes.getTotalPages()}"></span>
 
-            <th:block th:if="${notes.hasNext()}">
-                <a th:href="'/notes?pageSize=' + ${notes.getPageable().getPageSize()}
+                <th:block th:if="${notes.hasNext()}">
+                    <a th:href="'/notes/user/'+ ${first.userUUID} +'?pageSize=' + ${notes.getPageable().getPageSize()}
                             + '&pageNumber=' + ${notes.getPageable().getPageNumber()+2}"> > </a> &nbsp
-                <a th:href="'/notes?pageSize=' + ${notes.getPageable().getPageSize()}
+                    <a th:href="'/notes/user/'+ ${first.userUUID} +'?pageSize=' + ${notes.getPageable().getPageSize()}
                             + '&pageNumber=' + ${notes.getTotalPages()}"> >>> </a>
-            </th:block>
+                </th:block>
 
-        </div>
+            </div>
         </th:block>
     </div>
 </div>

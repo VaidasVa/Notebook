@@ -46,7 +46,7 @@ public class NoteController {
             @RequestParam(required = false) Integer pageNumber,
             @RequestParam(required = false) Integer pageSize) {
         model.addAttribute("notes", service.getNotesByUserId(userUUID, pageNumber, pageSize));
-        return "notes";
+        return "notesByUser";
     }
 
     @GetMapping("/{id}")
