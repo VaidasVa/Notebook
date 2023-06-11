@@ -36,11 +36,6 @@ public class UserController {
         this.kafka = kafka;
     }
 
-    @GetMapping("/add")
-    public void addUsers(){
-        service.addUsers();
-    }
-
     @GetMapping
     public ResponseEntity<List<User>> getAllUsers(){
         List<User> list = service.findAllUsers();
