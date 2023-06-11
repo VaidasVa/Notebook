@@ -47,33 +47,21 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> getUserById(UUID id) {
-        return repository.findById(id).map(mapper::userDAOToUser);
+        return repository
+                .findById(id)
+                .map(mapper::userDAOToUser);
     }
 
     @Override
     public Optional<User> findUserByEmail(String email) {
-        List<User> list = repository.findByEmail(email)
-                .stream()
-                .map(mapper::userDAOToUser)
-                .toList();
-
-        User user;
-        if (list.isEmpty()) {
-            user = null;
-        } else {
-            user = list.get(0);
-        }
-
-        if (user == null) {
-            return Optional.empty();
-        } else {
-            return Optional.of(user);
-        }
+        return repository
+                .findUserDAOByEmail(email)
+                .map(mapper::userDAOToUser);
     }
 
     @Override
     public Boolean userExistsByEmail(String email) {
-        return !repository.findByEmail(email).isEmpty();
+        return repository.findUserDAOByEmail(email).isPresent();
     }
 
     @Override
