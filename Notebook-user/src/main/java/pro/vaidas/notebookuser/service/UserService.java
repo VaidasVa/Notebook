@@ -12,8 +12,6 @@ import java.util.UUID;
 
 public interface UserService {
 
-    void addUsers();
-
     List<User> findAllUsers();
 
     Optional<User> getUserById(UUID id);

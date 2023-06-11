@@ -20,21 +20,12 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository repository;
     private final UserMapper mapper;
-    private final RoleService roleService;
     private final PasswordEncoder passwordEncoder;
 
-//    private AddUser addUser;
-
-    public UserServiceImpl(UserRepository repository, UserMapper mapper, RoleService roleService, PasswordEncoder passwordEncoder) {
+    public UserServiceImpl(UserRepository repository, UserMapper mapper, PasswordEncoder passwordEncoder) {
         this.repository = repository;
         this.mapper = mapper;
-        this.roleService = roleService;
         this.passwordEncoder = passwordEncoder;
-    }
-
-    @Override
-    public void addUsers() {
-//        addUser.addNewUsersIfEmpty();
     }
 
     @Override
