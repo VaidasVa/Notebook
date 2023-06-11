@@ -1,66 +1,214 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css');
 
-.login-page {
-    width: 700px;
-    padding: 8% 0 0;
-    margin: auto;
+html{
+    height:100%;
 }
-.form {
-    position: relative;
-    z-index: 1;
-    background: #FFFFFF;
-    max-width: 360px;
-    margin: 0 auto 100px;
-    padding: 45px;
-    text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-.form input {
-    font-family: "Roboto", sans-serif;
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-}
-.form .button {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #4169E1;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
-}
-.form button:hover,.form button:active,.form button:focus {
-    background: #4169E1;
-}
-.form .message {
-    margin: 15px 0 0;
-    color: #b3b3b3;
-    font-size: 12px;
-}
-.form .error {
-    color: red;
-}
-.form h1 {
-    color: #4169E1;
-}
-.form .message a {
-    color: #4169E1;
-    text-decoration: none;
-}
+
 body {
-    background: #4169E1;
-    font-family: "Roboto", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+     min-width: 100%; 
+     margin: auto;
+    }
+
+/**********/
+/* HEADER */
+/**********/
+
+header{
+    align-self: center;
+    min-height:45px;
+    min-width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,117,170,0.66) 0%, rgba(48,144,194,1) 30%, rgba(1,0,53,1) 80%);
+    color: white;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
 }
+
+h1>span>a,
+h1>span>a:hover{
+    align-self: center;
+    text-decoration: none;
+    color: black;
+}
+
+.move {margin-left: auto;}
+
+.col-search{
+    padding-right: 0;
+    margin-right: -2px;
+    align-self: center;
+}
+.col-btn{
+    padding-left:0;
+    margin-left: -2px;
+    align-self: center;
+}
+
+.search-field {
+    align-self: center;
+    padding: 10px;
+    margin-left: 0;
+    margin-right: -5px;
+    border-color: rgba(67, 117, 170, 0.66);
+    border-radius: 5px 0 0 5px;
+}
+
+.search-btn{
+    align-self: center;
+    margin-left: -5px;
+    padding-left: 0;
+}
+
+.pagetop>form>div>a>input,
+.pagetop>div>a>input{
+    align-self: center;
+    background-color:  rgb(67, 117, 170);
+    color: white;
+    font-size: larger;
+    font-style:normal;
+    border: 0;
+    padding: 10px 30px;
+    margin-left: 0;
+}
+
+.pagetop>form>div>a>input{
+    align-self: center;
+    border-radius: 0 5px 5px 0;
+}
+
+.pagetop>form>div>a>input:hover,
+.pagetop>div>a>input:hover,
+.pagetop>div>a>input:active{
+    background-color: white;
+    color:  rgb(67, 117, 170);
+    border-color: white;
+}
+
+
+.p-2,
+.p-2>input{
+    align-self: center;
+    padding: 0 auto;
+}
+
+/*********/
+/* TABLE */
+/*********/
+
+.table-titles>th{
+    background-color: rgb(67, 117, 170);
+    color: white;
+
+}
+
+.table-titles>th:nth-child(2),
+.table-titles>th:nth-child(3),
+.align-middle
+{
+    text-align: center;
+}
+
+.table>tbody>tr>td:first-child>a{
+    text-align: left;
+    text-decoration: none;
+    color: rgb(67, 117, 170);
+}
+
+.table>tbody>tr>td:nth-child(n+2){
+    color:grey;
+    font-size: smaller;
+}
+.container{
+    padding-bottom: 50px;
+}
+
+.container>form{
+    border: none;
+}
+
+.form-control{
+    margin-bottom: 30px;
+}
+
+.content{
+    padding-bottom: 100px;
+}
+
+.btn-outline-danger{
+    min-width: 5%;
+}
+
+.btn-outline-secondary{
+    min-width: 40%;
+}
+
+.updatebttn,
+.updatebttn:hover{
+    min-width: 52%;
+    color: white;
+    background-color: rgba(67, 117, 170, 0.66);}
+
+
+
+.table-nav,
+/*.table-nav>block>div>block>a,*/
+.table-nav>div>a
+{
+    align-items: center;
+    text-decoration: none;
+    color: rgba(67, 117, 170);
+    word-spacing: 7px;
+}
+
+/*********/
+/* LOGIN */
+/*********/
+
+.login {
+    width: 50%;
+    padding: 20px;
+    border: none;
+}
+
+
+.loginFormContainer{
+    align-items: center;
+}
+
+.login>div>input{
+    width: 50%;
+    padding: 2px 10px;
+    margin: 5px;
+}
+
+.loginbtn{
+    color: white;
+    background-color: rgba(67, 117, 170, 0.66);
+    max-width: 25%;
+    min-width: 25%;
+}
+
+.regbtn {
+    border: none;
+    background-color: white;
+    max-width: 25%;
+}
+
+/**********/
+/* FOOTER */
+/**********/
+footer{
+    /*position: absolute;*/
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+    padding: 5px;
+    background-color: rgba(67, 117, 170, 0.66);
+    color: rgb(67, 117, 170);
+    text-align: center;
+    font-size: small;
+}
+
+
+

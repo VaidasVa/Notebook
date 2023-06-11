@@ -1,5 +1,6 @@
 package pro.vaidas.notebookuser.service.impl;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import pro.vaidas.notebookuser.mapper.UserMapper;
 import pro.vaidas.notebookuser.model.KafkaMessageFromUser;
@@ -18,16 +19,17 @@ import java.util.stream.Collectors;
 public class UserServiceImpl implements UserService {
 
     private final UserRepository repository;
-//    private final MailingService mail;
     private final UserMapper mapper;
     private final RoleService roleService;
+    private final PasswordEncoder passwordEncoder;
 
 //    private AddUser addUser;
 
-    public UserServiceImpl(UserRepository repository,  UserMapper mapper, RoleService roleService) {
+    public UserServiceImpl(UserRepository repository, UserMapper mapper, RoleService roleService, PasswordEncoder passwordEncoder) {
         this.repository = repository;
         this.mapper = mapper;
         this.roleService = roleService;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
@@ -84,12 +86,14 @@ public class UserServiceImpl implements UserService {
             user.setRole(list);
             // Admin automatically activated
             user.setActivated(true);
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
             repository.save(mapper.userToUserDAO(user));
         } else {
             List<Role> list = new ArrayList<>();
             list.add(Role.builder().id(new Random().nextInt()).role("USER").build());
             user.setRole(list);
             user.setActivated(false);
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
             repository.save(mapper.userToUserDAO(user));
         }
     }

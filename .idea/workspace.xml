@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="388938fa-49f7-482a-a9b9-f2d464d23d25" name="Changes" comment="OAuth2 server impl">
+      <change afterPath="$PROJECT_DIR$/Auth-server/src/main/resources/static/css/style1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auth-server/src/main/resources/templates/login1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/131f5f06-9538-4f3b-b102-3eaa7b4651ce.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/131f5f06-9538-4f3b-b102-3eaa7b4651ce.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ports.md" beforeDir="false" afterPath="$PROJECT_DIR$/Ports.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/src/main/java/pro/vaidas/authserver/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/src/main/java/pro/vaidas/authserver/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/repository/NoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/repository/NoteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/java/pro/vaidas/notebookuser/web/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +160,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "dev",
     "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "/Users/vaidas/Desktop/Files/Programming/GitHub/Notebook/Notebook-server/src/main/resources/templates",
+    "last_opened_file_path": "/Users/vaidas/Desktop/Files/Programming/GitHub/Notebook/Auth-server/src/main/resources/static/css",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -176,11 +188,11 @@
       <recent name="pro.vaidas.notebookserver.business.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Auth-server/src/main/resources/static/css" />
+      <recent name="$PROJECT_DIR$/Auth-server/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/Notebook-server/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/Auth-server/src/main/resources" />
       <recent name="$PROJECT_DIR$/Notebook-user/src/main/resources/templates" />
-      <recent name="$PROJECT_DIR$/Mailing-service/src/main/resources/static" />
-      <recent name="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/logs" />
@@ -241,7 +253,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.NotebookServerApplication">
+  <component name="RunManager" selected="Spring Boot.NotebookUserApplication">
     <configuration name="Auth-server [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -572,7 +584,9 @@
       <workItem from="1686118381925" duration="42038000" />
       <workItem from="1686373931134" duration="3133000" />
       <workItem from="1686377079134" duration="6569000" />
-      <workItem from="1686383668552" duration="16963000" />
+      <workItem from="1686383668552" duration="17025000" />
+      <workItem from="1686404030748" duration="20000" />
+      <workItem from="1686415114906" duration="7052000" />
     </task>
     <task id="LOCAL-00001" summary="OAuth2 server impl">
       <created>1683708831809</created>

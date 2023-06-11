@@ -1,9 +1,12 @@
+
 server:
   port: 9000
 
 logging:
   level:
-    org.springframework.security: info
+    org:
+      springframework:
+        security: INFO
 
 spring:
   application:
@@ -12,9 +15,9 @@ spring:
     oauth2:
       authorizationserver:
         client:
-          oidc-client:
+          client:
             registration:
-              client-id: "oidc-client"
+              client-id: "client"
               client-secret: "{noop}secret"
               client-authentication-methods:
                 - "client_secret_basic"
@@ -22,12 +25,14 @@ spring:
                 - "authorization_code"
                 - "refresh_token"
               redirect-uris:
-                - "http://127.0.0.1:8080/login/oauth2/code/oidc-client"
+                - "http://127.0.0.1:8080/login/oauth2/code/spring"
               post-logout-redirect-uris:
-                - "http://127.0.0.1:8080/"
+                - "http://127.0.0.1:8080/login"
               scopes:
                 - "openid"
                 - "profile"
+                - "user.read"
+                - "user.write"
             require-authorization-consent: false
             require-proof-key: false
 
