@@ -22,9 +22,14 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9000
 
 myapp:
-  rootUrl: http://localhost:8080
+  rootUrl: http://localhost:8081
 
 logging:
   level:

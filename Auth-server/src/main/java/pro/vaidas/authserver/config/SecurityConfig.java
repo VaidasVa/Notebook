@@ -7,6 +7,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -34,7 +35,7 @@ public class SecurityConfig {
 
     @Bean
     @Order(1)
-    SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http)
+    public SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http)
             throws Exception {
         OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(http);
         http.getConfigurer(OAuth2AuthorizationServerConfigurer.class)
@@ -53,13 +54,13 @@ public class SecurityConfig {
 
     @Bean
     @Order(2)
-    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http)
+    public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http)
             throws Exception {
         http
-                .csrf( frcs -> frcs.disable())
+                .csrf(crossref -> crossref.disable())
                 .authorizeHttpRequests((authorize) -> authorize
                         .requestMatchers("/error", "/").permitAll()
-                        .anyRequest().permitAll())
+                        .anyRequest().authenticated())
                 .formLogin(formLogin -> formLogin
                         .loginPage("/login")
                         .permitAll());
@@ -75,7 +76,7 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        var user1 = User.withUsername("user").password("{noop}password").roles("USER").build();
+        var user1 = User.withUsername("user").password("{noop}password").roles("USER").authorities("user.read").build();
         var user2 = User.withUsername("admin").password("{noop}password").roles("USER", "ADMIN").build();
         return new InMemoryUserDetailsManager(user1, user2);
     }

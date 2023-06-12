@@ -3,9 +3,11 @@ package pro.vaidas.notebookclient.service;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import pro.vaidas.notebookclient.model.Note;
@@ -48,6 +50,9 @@ public class NoteClientImpl implements NoteClient {
     @Override
     @LoadBalanced
     public Note getNoteById(UUID id) {
+//        restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
+//        HttpHeaders headers = new HttpHeaders();
+//        headers.add("","");
         ResponseEntity<Note> response = restTemplate.getForEntity(NOTES_PATH_BY_ID, Note.class, id);
         return response.getBody();
     }

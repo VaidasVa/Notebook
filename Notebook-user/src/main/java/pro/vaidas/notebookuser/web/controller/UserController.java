@@ -106,6 +106,4 @@ public class UserController {
             return new ResponseEntity<>("User not found by email, nothing to delete.", HttpStatus.NOT_FOUND);
         }
     }
-
-
 }

@@ -39,6 +39,7 @@ public class NoteRestController {
             @RequestParam(required = false) String content,
             @RequestParam(required = false) Integer pageNumber,
             @RequestParam(required = false) Integer pageSize) {
+            System.out.println("--- CAME TO CONTROLLER");
             return service.getAllNotes(content, pageNumber, pageSize);
     }
 
@@ -58,7 +59,7 @@ public class NoteRestController {
     @PostMapping
     public ResponseEntity postNote(@RequestBody Note note) {
         service.addNote(note);
-        kafka.send(TOPIC, service.makeKafkaNote(note, "newNote"));
+//        kafka.send(TOPIC, service.makeKafkaNote(note, "newNote"));
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 

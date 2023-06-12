@@ -39,12 +39,14 @@ public class NoteServiceImpl implements NoteService {
     private static final int DEFAULT_PAGE = 0;
     private static final int DEFAULT_PAGE_SIZE = 20;
 
-
-    @PreAuthorize("permitAll()")
+//    @PreAuthorize("hasAnyAuthority('SCOPE_user.read')")
+    @PreAuthorize("hasRole('USER')")
     @Override
     public Page<Note> getAllNotes(String content, Integer pageNumber, Integer pageSize) {
         PageRequest pageRequest = buildPageRequest(pageNumber, pageSize);
         Page<NoteDAO> notePage;
+
+        System.out.println("--- CAME TO SERVICE");
 
         if (StringUtils.hasText(content)) {
             notePage = listNotesByContent(content, pageRequest);
@@ -57,7 +59,7 @@ public class NoteServiceImpl implements NoteService {
         return notePage.map(mapper::noteDAOToNote);
     }
 
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasAnyRole('ADMIN')")
     @Override
     public Page<Note> getNotesByUserId(String userUUID, Integer pageNumber, Integer pageSize) {
         PageRequest pageRequest = buildPageRequest(pageNumber, pageSize);
@@ -72,7 +74,7 @@ public class NoteServiceImpl implements NoteService {
         return userNotesPage.map(mapper::noteDAOToNote);}
     }
 
-    @PreAuthorize("permitAll()")
+    @PreAuthorize("hasRole('USER')")
     @Override
     public Note getNoteById(UUID id) {
         return repository.findById(id)
@@ -80,6 +82,7 @@ public class NoteServiceImpl implements NoteService {
                 .orElseThrow(
                         () -> new ResponseStatusException(NOT_FOUND));
     }
+
     @PreAuthorize("permitAll()")
     @Override
     public void addNote(Note note) {

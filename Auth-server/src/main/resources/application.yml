@@ -34,6 +34,9 @@ spring:
             require-authorization-consent: false
             require-proof-key: false
 
+myapp:
+  rootUrl: http://localhost:8080
+
 eureka:
   client:
     register-with-eureka: false

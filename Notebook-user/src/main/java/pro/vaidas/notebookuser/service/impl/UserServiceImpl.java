@@ -1,5 +1,6 @@
 package pro.vaidas.notebookuser.service.impl;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import pro.vaidas.notebookuser.mapper.UserMapper;
@@ -36,6 +37,7 @@ public class UserServiceImpl implements UserService {
                 .collect(Collectors.toList());
     }
 
+    @PreAuthorize("permitAll()")
     @Override
     public Optional<User> getUserById(UUID id) {
         return repository

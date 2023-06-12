@@ -42,11 +42,14 @@ spring:
             scope: openid, profile, user.read, user.write
             authorization-grant-type: authorization_code
             client-authentication-method: client_secret_basic
-            client-authorization-method: client_secret_basic
+#            client-authorization-method: client_secret_basic
             redirect-uri: http://127.0.0.1:8080/login/oauth2/code/spring
         provider:
           spring:
             issuer-uri: http://localhost:9000
+    user:
+      name: user
+      password: password
 
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
