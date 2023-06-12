@@ -74,7 +74,7 @@ public class NoteServiceImpl implements NoteService {
         return userNotesPage.map(mapper::noteDAOToNote);}
     }
 
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasAnyAuthority('user.read')")
     @Override
     public Note getNoteById(UUID id) {
         return repository.findById(id)
@@ -83,7 +83,7 @@ public class NoteServiceImpl implements NoteService {
                         () -> new ResponseStatusException(NOT_FOUND));
     }
 
-    @PreAuthorize("permitAll()")
+    @PreAuthorize("hasAnyAuthority('user.write')")
     @Override
     public void addNote(Note note) {
         note.setUserUUID(UUID.randomUUID().toString());
@@ -92,7 +92,7 @@ public class NoteServiceImpl implements NoteService {
 //        logger.info("New note created : " + note.getTitle() + " - on : " + LocalDateTime.now());
     }
 
-    @Override
+    @PreAuthorize("hasAnyAuthority('user.write')")
     public void updateNote(UUID id, Note note) {
 
         AtomicReference<Optional<Note>> atomicReference = new AtomicReference<>();
@@ -116,7 +116,7 @@ public class NoteServiceImpl implements NoteService {
         atomicReference.get();
     }
 
-    @Override
+    @PreAuthorize("hasAnyAuthority('user.write')")
     public void deleteNote(UUID id) {
         repository.deleteById(id);
     }

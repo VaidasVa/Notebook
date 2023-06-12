@@ -77,7 +77,7 @@ public class SecurityConfig {
     @Bean
     public UserDetailsService userDetailsService() {
         var user1 = User.withUsername("user").password("{noop}password").roles("USER").authorities("user.read").build();
-        var user2 = User.withUsername("admin").password("{noop}password").roles("USER", "ADMIN").build();
+        var user2 = User.withUsername("admin").password("{noop}password").roles("USER", "ADMIN").authorities("user.write", "user.read").build();
         return new InMemoryUserDetailsManager(user1, user2);
     }
 
