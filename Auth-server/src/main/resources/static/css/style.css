@@ -92,6 +92,9 @@ h1>span>a:hover{
     padding: 0 auto;
 }
 
+.form .error {
+    color: red;
+}
 /*********/
 /* TABLE */
 /*********/

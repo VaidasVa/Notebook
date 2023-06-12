@@ -13,8 +13,8 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-authorization-server', version: '1.1.0'
+//	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-oauth2-authorization-server', version: ''
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '3.1.0'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.0.2'
 

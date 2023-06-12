@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="388938fa-49f7-482a-a9b9-f2d464d23d25" name="Changes" comment="OAuth2 server impl" />
+    <list default="true" id="388938fa-49f7-482a-a9b9-f2d464d23d25" name="Changes" comment="OAuth2 server impl">
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/service/HomeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/filter/CsfrHeaderFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/src/main/java/pro/vaidas/authserver/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/src/main/java/pro/vaidas/authserver/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/src/main/resources/static/css/style1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Auth-server/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth-server/src/main/resources/templates/login1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/NotebookServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/NotebookServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/repository/impl/NoteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/repository/impl/NoteDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/service/impl/NoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/service/impl/NoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/web/controller/NoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/newNote.html" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/templates/newNote.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-user/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +96,30 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Auth-server" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Auth-server" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Auth-server" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Notebook-server" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Notebook-server" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Notebook-user" type="f1a62948:ProjectNode" />
               </path>
               <path>
@@ -91,8 +140,8 @@
         <option value="JUnit5 Test Class" />
         <option value="Record" />
         <option value="Enum" />
-        <option value="HTML File" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -198,11 +247,11 @@
       <recent name="pro.vaidas.notebookserver.web.controller.api" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pro.vaidas.notebookserver.service" />
       <recent name="pro.vaidas.notebookserver.business.service" />
       <recent name="pro.vaidas.notebookserver.web.controller" />
       <recent name="pro.vaidas.mailingservice.model" />
       <recent name="pro.vaidas.notebookserver.config" />
-      <recent name="pro.vaidas.notebookuser.model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -223,6 +272,8 @@
               <option value="Mailing-service [buildDependents]" />
               <option value="Mailing-service [build]" />
               <option value="Mailing-service [clean]" />
+              <option value="Notebook-server [build]" />
+              <option value="Notebook-server [clean]" />
               <option value="Notebook-user [build]" />
               <option value="Notebook-user [clean]" />
             </set>
@@ -238,7 +289,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.NotebookUserApplication">
+  <component name="RunManager" selected="Spring Boot.NotebookServerApplication">
     <configuration name="Auth-server [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -508,19 +559,19 @@
       <item itemvalue="Gradle.Mailing-service [buildDependents]" />
       <item itemvalue="Gradle.Mailing-service [clean]" />
       <item itemvalue="HTTP Request.generated-requests | #4" />
+      <item itemvalue="Spring Boot.NotebookServerApplication" />
       <item itemvalue="Spring Boot.AuthServerApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.MailingServiceApplication" />
       <item itemvalue="Spring Boot.NotebookClientApplication" />
-      <item itemvalue="Spring Boot.NotebookServerApplication" />
       <item itemvalue="Spring Boot.NotebookUserApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Notebook-server [build]" />
-        <item itemvalue="Gradle.Notebook-server [clean]" />
         <item itemvalue="Gradle.Auth-server [build]" />
         <item itemvalue="Gradle.Auth-server [clean]" />
+        <item itemvalue="Gradle.Notebook-server [build]" />
+        <item itemvalue="Gradle.Notebook-server [clean]" />
         <item itemvalue="Gradle.Notebook-user [build]" />
         <item itemvalue="Gradle.Notebook-user [clean]" />
         <item itemvalue="HTTP Request.generated-requests | #4" />
@@ -571,7 +622,7 @@
       <workItem from="1686377079134" duration="6569000" />
       <workItem from="1686383668552" duration="17025000" />
       <workItem from="1686404030748" duration="20000" />
-      <workItem from="1686415114906" duration="8248000" />
+      <workItem from="1686415114906" duration="41253000" />
     </task>
     <task id="LOCAL-00001" summary="OAuth2 server impl">
       <created>1683708831809</created>

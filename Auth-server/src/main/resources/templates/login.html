@@ -18,6 +18,10 @@
 <body th:class="css-selector">
     <center>
         <div class="loginFormContainer">
+            <div class="error" th:if="${param.error}">
+                Invalid username and password.</div>
+            <div class="error" th:if="${param.logout}">
+                You have been logged out.</div>
             <form class="col card p-3 my-5 login" method="post" th:action="@{/login}">
                 <div class="form-group">
                     <input class="form-control" name="username" placeholder="username" required type="text" />

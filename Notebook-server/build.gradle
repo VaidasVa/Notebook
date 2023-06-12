@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '3.0.6'
+    id 'org.springframework.boot' version '3.1.0'
     id 'io.spring.dependency-management' version '1.1.0'
 }
 
@@ -18,17 +18,24 @@ repositories {
     mavenCentral()
 }
 
-
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '3.1.0'
+
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '3.0.6'
     implementation group: 'com.mysql', name: 'mysql-connector-j', version: '8.0.33'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '3.0.6'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '3.1.0'
+    implementation group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity5', version: '3.1.1.RELEASE'
+
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '3.0.6'
+
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-oauth2-resource-server', version: '3.1.0'
+
+//    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '3.1.0'
+//    implementation group: 'org.springframework.security', name: 'spring-security-config', version: '6.1.0'
 
 //    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2', version: '3.1.0'
 //    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'
@@ -38,10 +45,10 @@ dependencies {
     implementation group: 'org.apache.zookeeper', name: 'zookeeper', version: '3.8.1'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.1'
 
-    implementation group: 'com.opencsv', name: 'opencsv', version: '5.7.1'
+//    implementation 'org.springframework.cloud:spring-cloud-dependencies:2022.0.3'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.0.2'
 
-    implementation 'org.springframework.cloud:spring-cloud-dependencies:2022.0.3'
-    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.0.2'
+    implementation group: 'com.opencsv', name: 'opencsv', version: '5.7.1'
 
     implementation 'org.mapstruct:mapstruct:1.5.5.Final'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'

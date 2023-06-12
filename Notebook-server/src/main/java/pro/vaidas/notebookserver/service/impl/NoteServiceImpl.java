@@ -6,6 +6,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.server.ResponseStatusException;
@@ -27,6 +28,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Service
 @AllArgsConstructor
+
 public class NoteServiceImpl implements NoteService {
 
     private final NoteRepository repository;
@@ -37,6 +39,8 @@ public class NoteServiceImpl implements NoteService {
     private static final int DEFAULT_PAGE = 0;
     private static final int DEFAULT_PAGE_SIZE = 20;
 
+
+    @PreAuthorize("permitAll()")
     @Override
     public Page<Note> getAllNotes(String content, Integer pageNumber, Integer pageSize) {
         PageRequest pageRequest = buildPageRequest(pageNumber, pageSize);
@@ -53,6 +57,7 @@ public class NoteServiceImpl implements NoteService {
         return notePage.map(mapper::noteDAOToNote);
     }
 
+    @PreAuthorize("hasRole('USER')")
     @Override
     public Page<Note> getNotesByUserId(String userUUID, Integer pageNumber, Integer pageSize) {
         PageRequest pageRequest = buildPageRequest(pageNumber, pageSize);
@@ -67,6 +72,7 @@ public class NoteServiceImpl implements NoteService {
         return userNotesPage.map(mapper::noteDAOToNote);}
     }
 
+    @PreAuthorize("permitAll()")
     @Override
     public Note getNoteById(UUID id) {
         return repository.findById(id)
@@ -74,7 +80,7 @@ public class NoteServiceImpl implements NoteService {
                 .orElseThrow(
                         () -> new ResponseStatusException(NOT_FOUND));
     }
-
+    @PreAuthorize("permitAll()")
     @Override
     public void addNote(Note note) {
         note.setUserUUID(UUID.randomUUID().toString());

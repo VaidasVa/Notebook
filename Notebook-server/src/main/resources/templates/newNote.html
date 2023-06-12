@@ -23,12 +23,16 @@
     <div class=" container">
         <form class="col card p-3 my-5" method="post" th:action="@{/notes}" th:object="${note}">
             <div class="form-group">
+
                 <label for="title" >Title</label>
                 <input class="form-control" id="title" placeholder="Note title" required th:field="*{title}"
                     type="text" autocomplete="false"/>
                 <label for="content">Content</label>
                 <input class="form-control content" id="content" placeholder="Note content" th:field="*{content}"
                     type="text" autocomplete="false"/>
+<!--                <input type="hidden"-->
+<!--                       th:name="${_csrf.parameterName}"-->
+<!--                       th:value="${_csrf.token}" />-->
             </div>
             <div>
                 <input class="btn updatebttn" type="submit" value="Save">

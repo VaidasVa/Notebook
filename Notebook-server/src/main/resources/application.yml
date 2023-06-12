@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
   error:
     whitelabel:
       enabled: false
@@ -22,10 +22,19 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9000
+#    user:
+#      name: user
+#      password: user
+#      roles: USER
 
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
-      defaultZone: http://localhost:8761/eureka
+#eureka:
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka

@@ -9,8 +9,6 @@ logging:
         security: INFO
 
 spring:
-  application:
-    name: OAuth2-Server
   security:
     oauth2:
       authorizationserver:
@@ -27,7 +25,7 @@ spring:
               redirect-uris:
                 - "http://127.0.0.1:8080/login/oauth2/code/spring"
               post-logout-redirect-uris:
-                - "http://127.0.0.1:8080/login"
+                - "http://127.0.0.1:8080/logged-out"
               scopes:
                 - "openid"
                 - "profile"
