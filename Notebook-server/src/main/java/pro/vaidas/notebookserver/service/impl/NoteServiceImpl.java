@@ -28,7 +28,6 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Service
 @AllArgsConstructor
-
 public class NoteServiceImpl implements NoteService {
 
     private final NoteRepository repository;
@@ -39,7 +38,6 @@ public class NoteServiceImpl implements NoteService {
     private static final int DEFAULT_PAGE = 0;
     private static final int DEFAULT_PAGE_SIZE = 20;
 
-//    @PreAuthorize("hasAnyAuthority('SCOPE_user.read')")
     @PreAuthorize("hasRole('USER')")
     @Override
     public Page<Note> getAllNotes(String content, Integer pageNumber, Integer pageSize) {
@@ -74,7 +72,7 @@ public class NoteServiceImpl implements NoteService {
         return userNotesPage.map(mapper::noteDAOToNote);}
     }
 
-    @PreAuthorize("hasAnyAuthority('user.read')")
+    @PreAuthorize("hasAuthority('user.read')")
     @Override
     public Note getNoteById(UUID id) {
         return repository.findById(id)
@@ -83,7 +81,7 @@ public class NoteServiceImpl implements NoteService {
                         () -> new ResponseStatusException(NOT_FOUND));
     }
 
-    @PreAuthorize("hasAnyAuthority('user.write')")
+    @PreAuthorize("hasAuthority('user.write')")
     @Override
     public void addNote(Note note) {
         note.setUserUUID(UUID.randomUUID().toString());
@@ -92,7 +90,7 @@ public class NoteServiceImpl implements NoteService {
 //        logger.info("New note created : " + note.getTitle() + " - on : " + LocalDateTime.now());
     }
 
-    @PreAuthorize("hasAnyAuthority('user.write')")
+    @PreAuthorize("hasAnyAuthority('user.read', 'user.write')")
     public void updateNote(UUID id, Note note) {
 
         AtomicReference<Optional<Note>> atomicReference = new AtomicReference<>();
@@ -116,7 +114,7 @@ public class NoteServiceImpl implements NoteService {
         atomicReference.get();
     }
 
-    @PreAuthorize("hasAnyAuthority('user.write')")
+    @PreAuthorize("hasAuthority('user.write')")
     public void deleteNote(UUID id) {
         repository.deleteById(id);
     }
@@ -129,7 +127,6 @@ public class NoteServiceImpl implements NoteService {
                 .eventType(event)
                 .build();
     }
-
 
     public Page<NoteDAO> listNotesByContent(String content, Pageable pageable) {
         return repository.findAllByContentIsLikeIgnoreCase("%" + content + "%", pageable);
