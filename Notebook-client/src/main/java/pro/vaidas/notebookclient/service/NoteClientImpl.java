@@ -33,18 +33,9 @@ public class NoteClientImpl implements NoteClient {
     @Override
     public PageableResponse<Note> getNotes(String title, String content, Integer pageNumber, Integer pageSize) {
 
-        String size;
-        String number;
-        String text;
-
-        if (pageSize != null){ size = "pageSize="+pageSize;}
-        else {size = "";}
-        if (pageNumber != null) {number = "pageNumber="+pageNumber;}
-        else {number = "";}
-        if (content != null) { text = "content=" + content;}
-        else {text = "";}
-
-        String url = notesPath + "?" + size + "&" + number + "&" + text;
+        String url = notesPath + "?pageSize=" + pageSize +
+                "&pageNumber="+ pageNumber +
+                "&content=" + content;
 
         ResponseEntity<PageableResponse<Note>> response =
                 restTemplate.exchange((url), HttpMethod.GET, null,
