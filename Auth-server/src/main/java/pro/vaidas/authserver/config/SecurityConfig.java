@@ -64,6 +64,7 @@ public class SecurityConfig {
                 .formLogin(formLogin -> formLogin
                         .loginPage("/login")
                         .permitAll());
+//                .logout(out -> out.logoutRequestMatcher());
         return http.build();
     }
 

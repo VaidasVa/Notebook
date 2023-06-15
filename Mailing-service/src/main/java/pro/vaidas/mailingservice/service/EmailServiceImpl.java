@@ -2,6 +2,7 @@ package pro.vaidas.mailingservice.service;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
+import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,13 +18,11 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 @Service
-@Slf4j
+@Log4j2
 public class EmailServiceImpl implements EmailService {
 
     private final JavaMailSender javaMailSender;
     private final TemplateEngine templateEngine;
-
-    private static final Logger logger = LogManager.getLogger(EmailServiceImpl.class);
 
     private final String SENDER_EMAIL = "notebookmailer@gmail.com";
     private final String SENDER_NAME = "Notebook App";
@@ -57,9 +56,7 @@ public class EmailServiceImpl implements EmailService {
                 email.setText("Hi, your note has been saved!", false);
             }
         }
-
         javaMailSender.send(mimeMessage);
-
-        logger.info(LocalDateTime.now() + " - email sent to : " + msg.getEmail() + ", message : " + mimeMessage.getContent());
+        log.info("email sent to : " + msg.getEmail() + ", message : " + mimeMessage.getContent());
     }
 }

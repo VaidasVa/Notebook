@@ -27,7 +27,7 @@ public class NoteRestController {
 
     private final KafkaTemplate<String, KafkaMessage> kafka;
 
-    private final String TOPIC = "NotebookServerTopic";
+    private static final String TOPIC = "NotebookServerTopic";
 
     public NoteRestController(NoteService service, KafkaTemplate<String, KafkaMessage> kafka) {
         this.service = service;
@@ -39,7 +39,6 @@ public class NoteRestController {
             @RequestParam(required = false) String content,
             @RequestParam(required = false) Integer pageNumber,
             @RequestParam(required = false) Integer pageSize) {
-            System.out.println("--- CAME TO CONTROLLER");
             return service.getAllNotes(content, pageNumber, pageSize);
     }
 
@@ -57,20 +56,20 @@ public class NoteRestController {
     }
 
     @PostMapping
-    public ResponseEntity postNote(@RequestBody Note note) {
+    public ResponseEntity<HttpStatus> postNote(@RequestBody Note note) {
         service.addNote(note);
 //        kafka.send(TOPIC, service.makeKafkaNote(note, "newNote"));
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity putNote(@PathVariable UUID id, @RequestBody Note note) {
+    public ResponseEntity<HttpStatus> putNote(@PathVariable UUID id, @RequestBody Note note) {
         service.updateNote(id, note);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity deleteNote(@PathVariable UUID id) {
+    public ResponseEntity<HttpStatus> deleteNote(@PathVariable UUID id) {
         service.deleteNote(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

@@ -7,7 +7,7 @@ import org.springframework.security.oauth2.server.resource.authentication.JwtAut
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.csrf.CsrfFilter;
-import pro.vaidas.notebookserver.web.controller.filter.CsfrHeaderFilter;
+//import pro.vaidas.notebookserver.web.controller.filter.CsfrHeaderFilter;
 
 @Configuration
 public class SecurityConfig {

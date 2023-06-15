@@ -8,15 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 import pro.vaidas.authserver.model.User;
 import pro.vaidas.authserver.service.UserDetailsRetrievalService;
 
-import java.util.Optional;
-
 @RestController
 @RequestMapping("/user")
-public class UserRetrievalControlerForTESTING {
+public class UserRetrievalControllerForTESTING {
 
     private final UserDetailsRetrievalService service;
 
-    public UserRetrievalControlerForTESTING(UserDetailsRetrievalService service) {
+    public UserRetrievalControllerForTESTING(UserDetailsRetrievalService service) {
         this.service = service;
     }
 

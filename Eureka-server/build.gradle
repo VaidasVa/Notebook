@@ -17,6 +17,18 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-dependencies:3.1.0'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:4.0.2'
 
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.20.0'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.20.0'
+
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'
+	implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.15.2'
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.15.2'
+}
+
+configurations {
+	all {
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+	}
 }
 
 tasks.named('test') {

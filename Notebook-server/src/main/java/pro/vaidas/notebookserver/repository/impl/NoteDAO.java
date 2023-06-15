@@ -40,7 +40,6 @@ public class NoteDAO {
     @Column(length = 16000)
     private String content;
 
-//    @JdbcTypeCode(SqlTypes.CHAR)
     @Column(length = 36, columnDefinition = "varchar(36)", updatable = false, nullable = false)
     private String userUUID;
 

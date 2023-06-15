@@ -1,6 +1,7 @@
 package pro.vaidas.notebookserver.service.impl;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -28,12 +29,11 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Service
 @AllArgsConstructor
+@Log4j2
 public class NoteServiceImpl implements NoteService {
 
     private final NoteRepository repository;
     private final NoteMapper mapper;
-
-//    private static final Logger logger = LogManager.getLogger(NoteServiceImpl.class);
 
     private static final int DEFAULT_PAGE = 0;
     private static final int DEFAULT_PAGE_SIZE = 20;
@@ -44,16 +44,14 @@ public class NoteServiceImpl implements NoteService {
         PageRequest pageRequest = buildPageRequest(pageNumber, pageSize);
         Page<NoteDAO> notePage;
 
-        System.out.println("--- CAME TO SERVICE");
-
         if (StringUtils.hasText(content)) {
             notePage = listNotesByContent(content, pageRequest);
         } else {
             notePage = repository.findAll(pageRequest);
         }
 
-        System.out.println("Total pages: " + notePage.getTotalPages());
-        System.out.println("Total notes: " + notePage.getTotalElements());
+        log.info("Total pages: " + notePage.getTotalPages() + "Total notes: " +
+                notePage.getTotalElements());
         return notePage.map(mapper::noteDAOToNote);
     }
 
@@ -61,15 +59,13 @@ public class NoteServiceImpl implements NoteService {
     @Override
     public Page<Note> getNotesByUserId(String userUUID, Integer pageNumber, Integer pageSize) {
         PageRequest pageRequest = buildPageRequest(pageNumber, pageSize);
-        Page<NoteDAO> userNotesPage = new PageImpl<>(new ArrayList<>());
-
+        Page<NoteDAO> userNotesPage;
         if (StringUtils.hasText(userUUID)) {
             userNotesPage = listNotesByUserUUID(userUUID, pageRequest);
-            System.out.println("Total pages for USER: " + userNotesPage.getTotalPages());
-            System.out.println("Total notes FOR USER: " + userNotesPage.getTotalElements());
-            return userNotesPage.map(mapper::noteDAOToNote);
-        } else { userNotesPage = repository.findAll(pageRequest);
-        return userNotesPage.map(mapper::noteDAOToNote);}
+            log.info("Total pages for USER: " + userNotesPage.getTotalPages() +
+                    "Total notes FOR USER: " + userNotesPage.getTotalElements());
+        } else { userNotesPage = repository.findAll(pageRequest);}
+        return userNotesPage.map(mapper::noteDAOToNote);
     }
 
     @PreAuthorize("hasAuthority('user.read')")
@@ -87,10 +83,11 @@ public class NoteServiceImpl implements NoteService {
         note.setUserUUID(UUID.randomUUID().toString());
         mapper.noteDAOToNote(repository
                 .save(mapper.noteToNoteDAO(note)));
-//        logger.info("New note created : " + note.getTitle() + " - on : " + LocalDateTime.now());
+        log.info("New note created : " + note.getTitle());
     }
 
     @PreAuthorize("hasAnyAuthority('user.read', 'user.write')")
+    @Override
     public void updateNote(UUID id, Note note) {
 
         AtomicReference<Optional<Note>> atomicReference = new AtomicReference<>();
@@ -115,6 +112,7 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @PreAuthorize("hasAuthority('user.write')")
+    @Override
     public void deleteNote(UUID id) {
         repository.deleteById(id);
     }

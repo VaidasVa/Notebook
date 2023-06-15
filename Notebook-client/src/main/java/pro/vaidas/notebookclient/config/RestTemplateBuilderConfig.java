@@ -12,7 +12,7 @@ import org.springframework.web.util.DefaultUriBuilderFactory;
 @Configuration
 public class RestTemplateBuilderConfig {
 
-    @Value("${myapp.rootUrl}")
+    @Value("${custom.rootUrl}")
     private String rootUrl;
 
     @Bean

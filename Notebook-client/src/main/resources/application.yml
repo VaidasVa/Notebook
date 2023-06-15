@@ -28,8 +28,10 @@ spring:
         jwt:
           issuer-uri: http://localhost:9000
 
-myapp:
+custom:
   rootUrl: http://localhost:8081
+  notesPath: /api/v1/notes
+  notesPathWithId: /api/v1/notes/{id}
 
 logging:
   level:

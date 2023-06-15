@@ -18,10 +18,23 @@ dependencies {
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '3.1.0'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.0.2'
 
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
+	compileOnly 'org.projectlombok:lombok:1.18.26'
+	annotationProcessor 'org.projectlombok:lombok:1.18.26'
 
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.0'
+
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.20.0'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.20.0'
+
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'
+	implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.15.2'
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.15.2'
+}
+
+configurations {
+	all {
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+	}
 }
 
 tasks.named('test') {

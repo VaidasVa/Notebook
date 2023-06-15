@@ -1,0 +1,25 @@
+configuration:
+  status: info
+  appenders:
+    console:
+      name: ConsoleAppender
+      target: SYSTEM_OUT
+      PatternLayout:
+        pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p - %m%n"
+    rollingFile:
+      - name: RollingFileAppender
+        fileName: logs/Notebook-server.log
+        filePattern: "logs/Notebook-server/%d{MM-dd-yyyy}-%i.log"
+        PatternLayout:
+          pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p %c{1}:%L - %m%n"
+        Policies:
+          TimeBasedTriggeringPolicy:
+            interval: 1
+        DefaultRolloverStrategy:
+          max: 10
+  loggers:
+    root:
+      level: info
+      AppenderRef:
+        - ref: ConsoleAppender
+        - ref: RollingFileAppender

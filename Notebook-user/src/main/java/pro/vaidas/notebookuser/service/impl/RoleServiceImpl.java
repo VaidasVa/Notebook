@@ -1,5 +1,6 @@
 package pro.vaidas.notebookuser.service.impl;
 
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 import pro.vaidas.notebookuser.mapper.RoleMapper;
 import pro.vaidas.notebookuser.model.Role;
@@ -11,6 +12,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
+@Log4j2
 public class RoleServiceImpl implements RoleService {
 
     private final RoleRepository repository;
@@ -31,7 +33,6 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public List<Role> getRoleByUserId(UUID id) {
-        System.out.println("In service : " + repository.findByUser(id.toString()));
         return repository.findByUser(id.toString())
                 .stream()
                 .map(mapper::roleDAOToRole)

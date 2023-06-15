@@ -4,9 +4,13 @@ server:
     whitelabel:
       enabled: false
 
+#logging:
+#  config: classpath:log4j2.yml
+
 spring:
   application:
     name: NotebookServer
+
   jpa:
     hibernate:
       ddl-auto: update
