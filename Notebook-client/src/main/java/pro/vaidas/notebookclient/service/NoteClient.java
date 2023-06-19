@@ -8,7 +8,7 @@ import java.util.UUID;
 
 public interface NoteClient {
 
-    PageableResponse<Note> getNotes(String title, String content, Integer pageNumber, Integer pageSize);
+    PageableResponse<Note> getNotes(String content, Integer pageNumber, Integer pageSize);
 
     Note getNoteById(UUID id);
 

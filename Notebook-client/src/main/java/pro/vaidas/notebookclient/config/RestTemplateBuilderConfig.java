@@ -12,18 +12,17 @@ import org.springframework.web.util.DefaultUriBuilderFactory;
 @Configuration
 public class RestTemplateBuilderConfig {
 
-    @Value("${custom.rootUrl}")
-    private String rootUrl;
+//    @Value("${custom.rootUrl}")
+//    private String rootUrl;
+//
+//    @Bean
+//    RestTemplateBuilder restTemplateBuilder(RestTemplateBuilderConfigurer configurer) {
+//        assert rootUrl != null;
+//        return configurer.configure(new RestTemplateBuilder())
+//                .uriTemplateHandler(new DefaultUriBuilderFactory(rootUrl));
+//    }
 
     @Bean
-    RestTemplateBuilder restTemplateBuilder(RestTemplateBuilderConfigurer configurer) {
-        assert rootUrl != null;
-        return configurer.configure(new RestTemplateBuilder())
-                .uriTemplateHandler(new DefaultUriBuilderFactory(rootUrl));
-    }
-
-    @Bean
-    @LoadBalanced
     RestTemplate restTemplate() {
         return new RestTemplate();
     }

@@ -1,5 +1,7 @@
 package pro.vaidas.notebookuser.model;
 
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,6 +22,11 @@ public class User {
     private String email;
     private String password;
     private LocalDateTime created;
-    private Boolean activated;
-    private List<Role> role;
+    private Role role;
+
+    private boolean notExpired;
+    private boolean notLocked;
+    private boolean credentialsNotExpired;
+    private boolean enabled;
+
 }

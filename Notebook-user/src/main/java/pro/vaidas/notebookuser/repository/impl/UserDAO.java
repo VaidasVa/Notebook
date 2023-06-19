@@ -1,13 +1,6 @@
 package pro.vaidas.notebookuser.repository.impl;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -17,6 +10,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
+import pro.vaidas.notebookuser.model.Role;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -24,7 +18,6 @@ import java.util.List;
 import java.util.UUID;
 
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -51,9 +44,12 @@ public class UserDAO {
     @CreationTimestamp
     private LocalDateTime created;
 
-    private Boolean activated;
+    private boolean notExpired = true;
+    private boolean notLocked = true;
+    private boolean credentialsNotExpired = true;
+    private boolean enabled = true;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval=true)
-    @JoinColumn(name = "user")
-    private List<RoleDAO> role = new ArrayList<>();
+    @Enumerated(value = EnumType.STRING)
+    private Role role;
+
 }

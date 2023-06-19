@@ -1,6 +1,6 @@
 package pro.vaidas.notebookuser.service.impl;
 
-import org.springframework.security.access.prepost.PreAuthorize;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import pro.vaidas.notebookuser.mapper.UserMapper;
@@ -8,7 +8,6 @@ import pro.vaidas.notebookuser.model.KafkaMessageFromUser;
 import pro.vaidas.notebookuser.model.Role;
 import pro.vaidas.notebookuser.model.User;
 import pro.vaidas.notebookuser.repository.UserRepository;
-import pro.vaidas.notebookuser.service.RoleService;
 import pro.vaidas.notebookuser.service.UserService;
 
 import java.io.IOException;
@@ -17,17 +16,12 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
     private final UserRepository repository;
     private final UserMapper mapper;
     private final PasswordEncoder passwordEncoder;
-
-    public UserServiceImpl(UserRepository repository, UserMapper mapper, PasswordEncoder passwordEncoder) {
-        this.repository = repository;
-        this.mapper = mapper;
-        this.passwordEncoder = passwordEncoder;
-    }
 
     @Override
     public List<User> findAllUsers() {
@@ -37,7 +31,7 @@ public class UserServiceImpl implements UserService {
                 .collect(Collectors.toList());
     }
 
-    @PreAuthorize("permitAll()")
+
     @Override
     public Optional<User> getUserById(UUID id) {
         return repository
@@ -59,21 +53,21 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void saveUser(User user) throws IOException, URISyntaxException {
-        // Without setting UUID here, the roles would not know which ID to set in joinColumn
         user.setId(UUID.randomUUID());
-        if (!user.getRole().isEmpty() && user.getRole().toString().toLowerCase().contains("admin")) {
-            List<Role> list = new ArrayList<>();
-            list.add(Role.builder().id(new Random().nextInt()).role("ADMIN").build());
-            user.setRole(list);
-            // Admin automatically activated
-            user.setActivated(true);
+        if (user.getRole().equals(Role.ADMIN)) {
             user.setPassword(passwordEncoder.encode(user.getPassword()));
+            user.setRole(Role.ADMIN);
+            user.setCredentialsNotExpired(true);
+            user.setEnabled(true);
+            user.setNotExpired(true);
+            user.setNotLocked(true);
             repository.save(mapper.userToUserDAO(user));
         } else {
-            List<Role> list = new ArrayList<>();
-            list.add(Role.builder().id(new Random().nextInt()).role("USER").build());
-            user.setRole(list);
-            user.setActivated(false);
+            user.setRole(Role.USER);
+            user.setCredentialsNotExpired(true);
+            user.setEnabled(true);
+            user.setNotExpired(true);
+            user.setNotLocked(true);
             user.setPassword(passwordEncoder.encode(user.getPassword()));
             repository.save(mapper.userToUserDAO(user));
         }

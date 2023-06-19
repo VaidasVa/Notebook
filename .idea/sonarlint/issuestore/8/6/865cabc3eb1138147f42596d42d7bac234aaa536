@@ -1,0 +1,10 @@
+
+a
+java:S13011"KReplace this "switch" statement by "if" statements to increase readability.(µàÑ‹
+l	java:S116"WRename this field "SENDER_EMAIL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËµÎ¬
+p	java:S116"VRename this field "SENDER_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à°¢Äúÿÿÿÿ
+7
+java:S1170"!Make this final field static too.(ËµÎ¬
+<
+java:S1170"!Make this final field static too.(à°¢Äúÿÿÿÿ
+7	java:S1311""Add a default case to this switch.(µàÑ‹

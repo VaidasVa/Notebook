@@ -17,7 +17,6 @@ import java.util.UUID;
 public class Note {
 
     private UUID id;
-
     private String title;
     private String content;
     private LocalDateTime created;

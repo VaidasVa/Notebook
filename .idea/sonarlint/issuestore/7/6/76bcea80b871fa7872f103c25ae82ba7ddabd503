@@ -1,0 +1,11 @@
+
+X
+java:S1128"6Remove this unused import 'lombok.AllArgsConstructor'.(´œ¾öùÿÿÿÿ8½Ä±‘1
+H
+java:S1128"+Remove this unused import 'lombok.Builder'.(§’Ğß8¾Ä±‘1
+J
+java:S1128"(Remove this unused import 'lombok.Data'.(÷í«ÿÿÿÿÿ8¾Ä±‘1
+R
+java:S1128"5Remove this unused import 'lombok.NoArgsConstructor'.(¸¨›8¾Ä±‘1
+M
+java:S1128"+Remove this unused import 'java.util.UUID'.(ÀãÄ£úÿÿÿÿ8¾Ä±‘1

@@ -3,23 +3,20 @@ package pro.vaidas.notebookserver.service.impl;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.server.ResponseStatusException;
 import pro.vaidas.notebookserver.mappers.NoteMapper;
+import pro.vaidas.notebookserver.model.KafkaMessage;
+import pro.vaidas.notebookserver.model.Note;
 import pro.vaidas.notebookserver.repository.NoteRepository;
 import pro.vaidas.notebookserver.repository.impl.NoteDAO;
 import pro.vaidas.notebookserver.service.NoteService;
-import pro.vaidas.notebookserver.model.KafkaMessage;
-import pro.vaidas.notebookserver.model.Note;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,7 +35,6 @@ public class NoteServiceImpl implements NoteService {
     private static final int DEFAULT_PAGE = 0;
     private static final int DEFAULT_PAGE_SIZE = 20;
 
-    @PreAuthorize("hasRole('USER')")
     @Override
     public Page<Note> getAllNotes(String content, Integer pageNumber, Integer pageSize) {
         PageRequest pageRequest = buildPageRequest(pageNumber, pageSize);
@@ -55,7 +51,6 @@ public class NoteServiceImpl implements NoteService {
         return notePage.map(mapper::noteDAOToNote);
     }
 
-    @PreAuthorize("hasAnyRole('ADMIN')")
     @Override
     public Page<Note> getNotesByUserId(String userUUID, Integer pageNumber, Integer pageSize) {
         PageRequest pageRequest = buildPageRequest(pageNumber, pageSize);
@@ -68,7 +63,6 @@ public class NoteServiceImpl implements NoteService {
         return userNotesPage.map(mapper::noteDAOToNote);
     }
 
-    @PreAuthorize("hasAuthority('user.read')")
     @Override
     public Note getNoteById(UUID id) {
         return repository.findById(id)
@@ -77,7 +71,6 @@ public class NoteServiceImpl implements NoteService {
                         () -> new ResponseStatusException(NOT_FOUND));
     }
 
-    @PreAuthorize("hasAuthority('user.write')")
     @Override
     public void addNote(Note note) {
         note.setUserUUID(UUID.randomUUID().toString());
@@ -86,7 +79,6 @@ public class NoteServiceImpl implements NoteService {
         log.info("New note created : " + note.getTitle());
     }
 
-    @PreAuthorize("hasAnyAuthority('user.read', 'user.write')")
     @Override
     public void updateNote(UUID id, Note note) {
 
@@ -111,7 +103,6 @@ public class NoteServiceImpl implements NoteService {
         atomicReference.get();
     }
 
-    @PreAuthorize("hasAuthority('user.write')")
     @Override
     public void deleteNote(UUID id) {
         repository.deleteById(id);

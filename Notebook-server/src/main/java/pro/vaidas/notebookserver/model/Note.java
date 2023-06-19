@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@Component
 @Builder
 @Data
 @NoArgsConstructor
@@ -19,11 +18,7 @@ import java.util.UUID;
 public class Note {
 
     private UUID id;
-
-//    @NotBlank
-//    @NotNull
     private String title;
-
     private String content;
     private String userUUID;
     private LocalDateTime created;

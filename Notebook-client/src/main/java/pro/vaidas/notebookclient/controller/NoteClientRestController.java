@@ -21,11 +21,10 @@ public class NoteClientRestController {
 
     @GetMapping
     public PageableResponse<Note> getNotes(
-            @RequestParam(required = false) String title,
             @RequestParam(required = false) String content,
             @RequestParam(required = false) Integer pageNumber,
             @RequestParam(required = false) Integer pageSize) {
-        return service.getNotes(title, content, pageNumber, pageSize);
+        return service.getNotes(content, pageNumber, pageSize);
     }
 
     @GetMapping(value = "/{id}", produces="application/json")

@@ -1,38 +1,11 @@
-
 server:
-  port: 9000
+  port: 8999
 
 logging:
   level:
     org:
       springframework:
         security: INFO
-
-spring:
-  security:
-    oauth2:
-      authorizationserver:
-        client:
-          client:
-            registration:
-              client-id: "client"
-              client-secret: "{noop}secret"
-              client-authentication-methods:
-                - "client_secret_basic"
-              authorization-grant-types:
-                - "authorization_code"
-                - "refresh_token"
-              redirect-uris:
-                - "http://127.0.0.1:8080/login/oauth2/code/spring"
-              post-logout-redirect-uris:
-                - "http://127.0.0.1:8080/logged-out"
-              scopes:
-                - "openid"
-                - "profile"
-                - "user.read"
-                - "user.write"
-            require-authorization-consent: false
-            require-proof-key: false
 
 myapp:
   rootUrl: http://localhost:8080

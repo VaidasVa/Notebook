@@ -1,0 +1,13 @@
+
+X	java:S125"<This block of commented-out lines of code should be removed.(¨øš½8ü¶ ğŒ1
+l
+java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8€· ğŒ1
+
+java:S1128"lRemove this unused import 'org.springframework.boot.autoconfigure.web.client.RestTemplateBuilderConfigurer'.(ö¿´Øùÿÿÿÿ8€· ğŒ1
+v
+java:S1128"TRemove this unused import 'org.springframework.boot.web.client.RestTemplateBuilder'.(—«ñûÿÿÿÿ8€· ğŒ1
+t
+java:S1128"WRemove this unused import 'org.springframework.cloud.client.loadbalancer.LoadBalanced'.(Éâ¦‡8œéŸğŒ1
+t
+java:S1128
+"RRemove this unused import 'org.springframework.web.util.DefaultUriBuilderFactory'.(Æ¥®úÿÿÿÿ8€· ğŒ1

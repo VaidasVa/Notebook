@@ -24,6 +24,8 @@ dependencies {
     developmentOnly 'org.springframework.boot:spring-boot-devtools:3.0.4'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.0'
 
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '3.1.0'
+
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.0.2'
 
     compileOnly 'org.projectlombok:lombok:1.18.26'

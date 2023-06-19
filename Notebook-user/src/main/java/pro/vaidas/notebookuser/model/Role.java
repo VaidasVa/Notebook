@@ -7,13 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
-@Builder
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class Role {
-
-    private int id;
-    private String role;
-    private UUID user;
+public enum Role {
+    USER,
+    ADMIN
 }

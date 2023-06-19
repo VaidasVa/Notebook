@@ -5,8 +5,8 @@ server:
       enabled: false
 
 spring:
-  main:
-    web-application-type: reactive
+#  main:
+#    web-application-type: reactive
   application:
     name: NotebookUserRegistrationServer
   jpa:
@@ -22,40 +22,21 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-  cloud:
-    gateway:
-      default-filters:
-        - TokenRelay=
-      routes:
-        - id: route
-          uri: http://localhost:8081/
-          predicates:
-            - Path=/**
-  security:
-    oauth2:
-      client:
-        registration:
-          springoauthclient:
-            provider: spring
-            client-id: client
-            client-secret: secret
-            scope: openid, profile, user.read, user.write
-            authorization-grant-type: authorization_code
-            client-authentication-method: client_secret_basic
-#            client-authorization-method: client_secret_basic
-            redirect-uri: http://127.0.0.1:8080/login/oauth2/code/spring
-        provider:
-          spring:
-            issuer-uri: http://localhost:9000
-    user:
-      name: user
-      password: password
+#  cloud:
+#    gateway:
+#      default-filters:
+#        - TokenRelay=
+#      routes:
+#        - id: route
+#          uri: http://localhost:8081/
+#          predicates:
+#            - Path=/**
+
 
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
   kafka:
     bootstrap-servers: localhost:9092
-
 
 eureka:
   client:
