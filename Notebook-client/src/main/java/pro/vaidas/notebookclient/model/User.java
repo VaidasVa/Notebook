@@ -7,17 +7,14 @@ import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
-
-@Component
+//
+//@Component
 @Builder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
-
     private UUID id;
-
     private String email;
-
     private String password;
 }

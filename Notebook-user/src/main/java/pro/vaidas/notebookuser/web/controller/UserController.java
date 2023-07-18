@@ -76,7 +76,7 @@ public class UserController {
             return new ResponseEntity<>("Password is mandatory", HttpStatus.BAD_REQUEST);
         } else {
             service.saveUser(user);
-//            kafka.send(TOPIC, service.makeKafkaUser(user, "newUser"));
+            kafka.send(TOPIC, service.makeKafkaUser(user, "newUser"));
             return new ResponseEntity<>("User saved, ", HttpStatus.CREATED);
         }
     }

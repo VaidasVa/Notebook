@@ -27,6 +27,8 @@ spring:
 custom:
   notesPath: http://localhost:8081/api/v1/notes
   notesPathWithId: http://localhost:8081/api/v1/notes/{id}
+  authPath: http://localhost:8999/api/v1/auth/authentication
+  secret: fe623bd733fc57bad3fe78db92b1016488e323912553695449d0d39cb833b13a
 
 logging:
   level:
@@ -36,8 +38,8 @@ logging:
 
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka
   instance:

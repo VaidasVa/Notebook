@@ -1048,77 +1048,80 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="299" parent="1" name="university">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="300" parent="1" name="login_system">
+    <schema id="300" parent="1" name="oauth2amigos">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="301" parent="1" name="notebook_users">
+    <schema id="301" parent="1" name="login_system">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="302" parent="1" name="pokemonapicourse">
+    <schema id="302" parent="1" name="notebook_users">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="303" parent="1" name="appointment">
+    <schema id="303" parent="1" name="pokemonapicourse">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <user id="304" parent="1" name="coding_events">
+    <schema id="304" parent="1" name="appointment">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <user id="305" parent="1" name="coding_events">
       <Host>localhost</Host>
     </user>
-    <user id="305" parent="1" name="mysql.infoschema">
+    <user id="306" parent="1" name="mysql.infoschema">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="306" parent="1" name="mysql.session">
+    <user id="307" parent="1" name="mysql.session">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="307" parent="1" name="mysql.sys">
+    <user id="308" parent="1" name="mysql.sys">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="308" parent="1" name="root">
+    <user id="309" parent="1" name="root">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="309" parent="294" name="notes">
+    <table id="310" parent="294" name="notes">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="310" parent="309" name="id">
+    <column id="311" parent="310" name="id">
       <DasType>varchar(36)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="311" parent="309" name="content">
-      <DasType>text|0s</DasType>
+    <column id="312" parent="310" name="content">
+      <DasType>varchar(16000)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="312" parent="309" name="created">
+    <column id="313" parent="310" name="created">
       <DasType>datetime(6)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="313" parent="309" name="title">
+    <column id="314" parent="310" name="title">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="314" parent="309" name="updated">
+    <column id="315" parent="310" name="updated">
       <DasType>datetime(6)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="315" parent="309" name="useruuid">
+    <column id="316" parent="310" name="useruuid">
       <DasType>varchar(36)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <index id="316" parent="309" name="PRIMARY">
+    <index id="317" parent="310" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="317" parent="309" name="PRIMARY">
+    <key id="318" parent="310" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

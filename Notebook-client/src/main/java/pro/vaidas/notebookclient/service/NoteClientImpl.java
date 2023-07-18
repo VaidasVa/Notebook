@@ -3,16 +3,13 @@ package pro.vaidas.notebookclient.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
 import pro.vaidas.notebookclient.model.Note;
 import pro.vaidas.notebookclient.wrapper.PageableResponse;
 
@@ -20,7 +17,6 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-@EnableWebSecurity
 @Log4j2
 @RequiredArgsConstructor
 public class NoteClientImpl implements NoteClient {
@@ -32,12 +28,11 @@ public class NoteClientImpl implements NoteClient {
     @Value("${custom.notesPathWithId}")
     private String notesPathById;
 
-    @PreAuthorize("hasRole('USER')")
+
     @Override
     public PageableResponse<Note> getNotes(String content,
                                            Integer pageNumber,
                                            Integer pageSize) {
-
         String text  = Optional.ofNullable(content).orElse("");
         Integer num  = Optional.ofNullable(pageNumber).orElse(0);
         Integer size = Optional.ofNullable(pageSize).orElse(20);
@@ -52,7 +47,6 @@ public class NoteClientImpl implements NoteClient {
 
     @Override
     public Note getNoteById(UUID id) {
-
         ResponseEntity<Note> response = restTemplate.getForEntity(notesPathById, Note.class, id);
         log.info("Response received from Notebook Server: " + response);
         return response.getBody();

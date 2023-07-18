@@ -74,4 +74,9 @@ public class NoteRestController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    @GetMapping("/access-denied")
+    public String denied(){
+        return "I see what you're doing, but no. Access denied.";
+    }
+
 }

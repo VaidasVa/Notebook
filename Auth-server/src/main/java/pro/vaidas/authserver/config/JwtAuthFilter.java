@@ -29,8 +29,6 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                                     @NonNull FilterChain filterChain)
             throws ServletException, IOException {
 
-        // when we make a call we need to pass JWT token in header
-        // gets bearer token
         final String authHeader = request.getHeader("Authorization");
         final String jwtToken;
         final String userEmail;
@@ -41,18 +39,14 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         }
         jwtToken = authHeader.substring(7);
 
-        // call UserDetailsService to extract userName and check if we have a user in DB
         userEmail = jwtService.getUserName(jwtToken);
                 if (userEmail != null &&
                 // checking if user is not authenticated yet
                 SecurityContextHolder.getContext().getAuthentication() == null)
         {
-            // if not authenticated - then checking with database -
-            // load.. is implemented and overriden in AppConfig
             UserDetails userDetails = this
                     .userDetailsService.loadUserByUsername(userEmail);
 
-            // if user is valid, update securityContext and send request to DispatchServlet
             if (jwtService.isTokenValid(jwtToken, userDetails)){
                 // update security context
                 UsernamePasswordAuthenticationToken authToken =
@@ -62,7 +56,6 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                         userDetails.getAuthorities());
                 authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 
-                //update Security Context Holder
                 SecurityContextHolder.getContext().setAuthentication(authToken);
             }
         }

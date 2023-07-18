@@ -60,7 +60,7 @@ public class NoteController {
     @PostMapping
     public RedirectView createNote(Note note){
         service.addNote(note);
-        kafka.send(TOPIC, service.makeKafkaNote(note, "newNote"));
+//        kafka.send(TOPIC, service.makeKafkaNote(note, "newNote"));
         return new RedirectView("/notes");
     }
 

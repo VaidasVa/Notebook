@@ -9,7 +9,6 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface NoteRepository extends JpaRepository<NoteDAO, UUID> {
-    Page<NoteDAO> findAllByTitleIsLikeIgnoreCase(String title, Pageable pageable);
     Page<NoteDAO> findAllByContentIsLikeIgnoreCase(String content, Pageable pageable);
     Page<NoteDAO> findAllByUserUUID(String userUUID, Pageable pageable);
 

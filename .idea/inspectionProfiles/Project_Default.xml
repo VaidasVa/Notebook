@@ -5,6 +5,8 @@
       <option name="customHeaders">
         <set>
           <option value="CSRF-TOKEN-VALUE" />
+          <option value="validUntil" />
+          <option value="token" />
         </set>
       </option>
     </inspection_tool>

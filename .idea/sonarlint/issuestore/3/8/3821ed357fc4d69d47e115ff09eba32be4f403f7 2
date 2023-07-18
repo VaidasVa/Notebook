@@ -1,0 +1,19 @@
+
+M
+java:S1611,"8Remove the parentheses around the "exceptions" parameter(Œ´þq
+R
+java:S16112"<Remove the parentheses around the "resourceServer" parameter(õìÌš
+M
+java:S1611="7Remove the parentheses around the "authorize" parameter(–²ÇÁ
+Q	java:S125C"<This block of commented-out lines of code should be removed.(ˆÑ´´
+G
+java:S1611I"1Remove the parentheses around the "web" parameter(¥»çñ
+[
+java:S1128"@Remove this unused import 'org.springframework.http.HttpMethod'.(Ê¨Ä¡øÿÿÿÿ
+ˆ
+java:S1128
+"rRemove this unused import 'org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer'.(Ç¼Î
+s
+java:S1128"XRemove this unused import 'org.springframework.security.web.access.AccessDeniedHandler'.(½í•Îüÿÿÿÿ
+‘
+java:S1128"{Remove this unused import 'org.springframework.security.web.server.util.matcher.PathPatternParserServerWebExchangeMatcher'.(—Ê”®

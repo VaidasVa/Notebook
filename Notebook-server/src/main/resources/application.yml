@@ -4,9 +4,6 @@ server:
     whitelabel:
       enabled: false
 
-#logging:
-#  config: classpath:log4j2.yml
-
 spring:
   application:
     name: NotebookServer
@@ -36,9 +33,9 @@ spring:
 #      password: user
 #      roles: USER
 
-#eureka:
-#  client:
-#    register-with-eureka: false
-#    fetch-registry: false
-#    service-url:
-#      defaultZone: http://localhost:8761/eureka
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
