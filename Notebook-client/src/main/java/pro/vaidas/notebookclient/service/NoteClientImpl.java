@@ -2,7 +2,9 @@ package pro.vaidas.notebookclient.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
@@ -22,6 +24,7 @@ import java.util.UUID;
 public class NoteClientImpl implements NoteClient {
 
     private final RestTemplate restTemplate;
+    private CircuitBreakerFactory circuitBreakerFactory;
 
     @Value("${custom.notesPath}")
     private String notesPath;
@@ -33,6 +36,7 @@ public class NoteClientImpl implements NoteClient {
     public PageableResponse<Note> getNotes(String content,
                                            Integer pageNumber,
                                            Integer pageSize) {
+
         String text  = Optional.ofNullable(content).orElse("");
         Integer num  = Optional.ofNullable(pageNumber).orElse(0);
         Integer size = Optional.ofNullable(pageSize).orElse(20);

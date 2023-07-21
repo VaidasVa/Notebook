@@ -1,5 +1,7 @@
 package pro.vaidas.notebookclient.controller;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import pro.vaidas.notebookclient.model.AuthDetails;
 import pro.vaidas.notebookclient.model.Note;
 import pro.vaidas.notebookclient.service.Authentication;
 import pro.vaidas.notebookclient.service.NoteClientImpl;
@@ -34,6 +37,7 @@ public class NoteClientRestController {
     }
 
     @GetMapping
+    @CircuitBreaker(name= "default", fallbackMethod = "fallbackMethodGetNotes")
     public PageableResponse<Note> getNotes(
             @RequestParam(required = false) String content,
             @RequestParam(required = false) Integer pageNumber,
@@ -43,7 +47,6 @@ public class NoteClientRestController {
             return service.getNotes(content, pageNumber, pageSize);
         } else return null;
     }
-
 
     @GetMapping(value = "/{id}", produces = "application/json")
     public @ResponseBody Note getNoteById(
@@ -55,7 +58,8 @@ public class NoteClientRestController {
     }
 
     @PostMapping
-    public ResponseEntity postNote(
+    @CircuitBreaker(name= "default", fallbackMethod = "fallbackMethodPostNote")
+    public ResponseEntity<String> postNote(
             @RequestBody Note note,
             @RequestHeader("Authorization") String authorizationHeader) {
         if (authService.setSecurityContext(authorizationHeader)) {
@@ -65,7 +69,7 @@ public class NoteClientRestController {
     }
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity putNote(
+    public ResponseEntity<String> putNote(
             @PathVariable UUID id,
             @RequestBody Note note,
             @RequestHeader("Authorization") String authorizationHeader) {
@@ -76,7 +80,7 @@ public class NoteClientRestController {
     }
 
     @DeleteMapping(value = "/{id}")
-    public ResponseEntity deleteNote(
+    public ResponseEntity<String> deleteNote(
             @PathVariable("id") UUID id,
             @RequestHeader("Authorization") String authorizationHeader) {
         if (authService.setSecurityContext(authorizationHeader)) {
@@ -84,4 +88,28 @@ public class NoteClientRestController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else return null;
     }
+
+    public static final ResponseEntity<String> SERVICE_DOWN = new ResponseEntity<>("Remote service is unavailable",
+            HttpStatus.SERVICE_UNAVAILABLE);
+
+    public Object fallbackMethodGetNotes(
+            String content, Integer pageNumber,
+            Integer pageSize, String authorizationHeader,
+            Exception ex){
+        return SERVICE_DOWN;
+    }
+
+    public ResponseEntity<String> fallbackMethodPostNote(
+            Note note, String s,
+            Exception ex){
+        return SERVICE_DOWN;
+    }
+
+
+    public ResponseEntity<String> fallbackMethodAuth(
+            AuthDetails authDetails, HttpServletResponse response,
+            Exception ex){
+        return SERVICE_DOWN;
+    }
+
 }
