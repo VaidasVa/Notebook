@@ -5,94 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="388938fa-49f7-482a-a9b9-f2d464d23d25" name="Changes" comment="OAuth2 server impl">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75e00496803db55ab310f43af33ec0e915a96487" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75e00496803db55ab310f43af33ec0e915a96487 3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/873a22b9c14faeca0ac2665ae1fc74f12a0971f9 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/91822093252f7db47d5c9e5ddb250c75582d5218" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/91e5ae530666d80ec30b41570246b65eb6f4b419" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e9bd5391ddb388a162d20c05a892f46b19e8137" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/1/a16026ef396266690d5a44afe5860023fb40d37c 3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5b7ad3f352a9aba1eba9b1ef3dbfac3a34d0e88" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5b7ad3f352a9aba1eba9b1ef3dbfac3a34d0e88 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/7/a78d80c5bbae1079f83d0883e0b9e85b5b6c6196" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/7/a78d80c5bbae1079f83d0883e0b9e85b5b6c6196 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b8c422af6687cd7542ec84123408e20e0391420a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b8c422af6687cd7542ec84123408e20e0391420a 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/4/c4e9b2f7ce86b70ac092efe0f8e096ed9f44a5a5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cdc703551ca14c0e2d15d3bf85887023b4f33cb9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/5/d56cdadad79b8885d34963f5e3c0d28c7dd21cd8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e9f28eb1e540e597e985d4d91a81ed619d6190d7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e9f28eb1e540e597e985d4d91a81ed619d6190d7 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/eb3d44e229cab629d6c23d643812682f210931c0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa513c637c23d36fe9a1c7cbd8a75c9ab944d8f3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa513c637c23d36fe9a1c7cbd8a75c9ab944d8f3 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/c/fc858f8aeb591a45224987cea4fcf52e77e05803 3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/1/212bcec15b243cd0937abf460a847300d20c4845" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/1/212bcec15b243cd0937abf460a847300d20c4845 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/d/2df43eb9994a5fb79a53818346b101cfacda1652 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/f/3f92ba00f75a614375e7367e58a4a1681303548a 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/0/406be86dea6d542a4a7d14679af807767f4f535b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/0/501e01b84b3b8874d68938b4a1fee8e55aea9787" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/7/5721051cc25946514fa8a3c839bec4173fecd5fb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/7/5721051cc25946514fa8a3c839bec4173fecd5fb 3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/c/5ce319b3496c2283f5667acf6e9be3c7ad2b56d9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/1/617a10e751df93056f78f82af5f857442a0c6a11 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/3/734a6f767681b320052749f32b11119bf0f39c30" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/3/734a6f767681b320052749f32b11119bf0f39c30 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/5/75e00496803db55ab310f43af33ec0e915a96487" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/5/75e00496803db55ab310f43af33ec0e915a96487 3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/7/873a22b9c14faeca0ac2665ae1fc74f12a0971f9 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/1/91822093252f7db47d5c9e5ddb250c75582d5218" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/1/91822093252f7db47d5c9e5ddb250c75582d5218 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/1/91e5ae530666d80ec30b41570246b65eb6f4b419" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/e/9e9bd5391ddb388a162d20c05a892f46b19e8137" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/e/9e9bd5391ddb388a162d20c05a892f46b19e8137 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/1/a16026ef396266690d5a44afe5860023fb40d37c 3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/5/a5b7ad3f352a9aba1eba9b1ef3dbfac3a34d0e88" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/5/a5b7ad3f352a9aba1eba9b1ef3dbfac3a34d0e88 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/7/a78d80c5bbae1079f83d0883e0b9e85b5b6c6196" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/7/a78d80c5bbae1079f83d0883e0b9e85b5b6c6196 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/8/b8c422af6687cd7542ec84123408e20e0391420a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/8/b8c422af6687cd7542ec84123408e20e0391420a 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/3/c33eba5807cfed5087c75f02221b70dd5bace16f 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/4/c4e9b2f7ce86b70ac092efe0f8e096ed9f44a5a5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/d/cdc703551ca14c0e2d15d3bf85887023b4f33cb9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/d/cdc703551ca14c0e2d15d3bf85887023b4f33cb9 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/5/d56cdadad79b8885d34963f5e3c0d28c7dd21cd8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/5/d56cdadad79b8885d34963f5e3c0d28c7dd21cd8 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/9/e9f28eb1e540e597e985d4d91a81ed619d6190d7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/9/e9f28eb1e540e597e985d4d91a81ed619d6190d7 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/b/eb3d44e229cab629d6c23d643812682f210931c0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/b/eb3d44e229cab629d6c23d643812682f210931c0 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/a/fa513c637c23d36fe9a1c7cbd8a75c9ab944d8f3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/a/fa513c637c23d36fe9a1c7cbd8a75c9ab944d8f3 2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/c/fc858f8aeb591a45224987cea4fcf52e77e05803 3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/config/CircuitBreakerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebook-user/src/test/java/pro/vaidas/notebookuser/service/impl/UserServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/0/00907458ddf737592f33c7d853b22b6729f4822f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/212bcec15b243cd0937abf460a847300d20c4845" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a43edd6195cd997729ccc3755ba3fa9ddd0b259" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/980bb22fe3a6a8a6834f1b7e53fdb50372bb1b05" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2df43eb9994a5fb79a53818346b101cfacda1652 2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d2d0d6564d9ddaa1696734fa40681f9ae690f431" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/e/eea19de938bb2648b4bfec82fc741f56947d1111" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3f92ba00f75a614375e7367e58a4a1681303548a 2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/406be86dea6d542a4a7d14679af807767f4f535b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/012d6cde5f1ab67cb6526089b48a45166cd8a57e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0ffa26fb45a9682c9b3a2b373a6866017bba3021" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/421edec1cdab25d5c5686c39c01bdf4c35648c41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4a7d3b82beb94c887939d204186f59ed9eb758c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/58a95d91106c6d2114889644cbfe5f5a79b3ed63" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/58a95d91106c6d2114889644cbfe5f5a79b3ed63" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f6b3606f7c7cd549f2dbcd9e8f19d5bff28fe2e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9c64b693946cf52c05d5073152436850c48f3a2c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9c64b693946cf52c05d5073152436850c48f3a2c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b114aa5c06e4767ff52e83d266ff69f759611c1c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5c4e6e9c28b7b4318d2711d92bbcc3bf7ef2c97" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/0/00907458ddf737592f33c7d853b22b6729f4822f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/501e01b84b3b8874d68938b4a1fee8e55aea9787" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/a/0a43edd6195cd997729ccc3755ba3fa9ddd0b259" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/8/980bb22fe3a6a8a6834f1b7e53fdb50372bb1b05" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/5721051cc25946514fa8a3c839bec4173fecd5fb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/2/d2d0d6564d9ddaa1696734fa40681f9ae690f431" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5ce319b3496c2283f5667acf6e9be3c7ad2b56d9" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/e/eea19de938bb2648b4bfec82fc741f56947d1111" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/1/617a10e751df93056f78f82af5f857442a0c6a11 2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/3/734a6f767681b320052749f32b11119bf0f39c30" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/1/012d6cde5f1ab67cb6526089b48a45166cd8a57e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/f/0ffa26fb45a9682c9b3a2b373a6866017bba3021" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/2/421edec1cdab25d5c5686c39c01bdf4c35648c41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/a/4a7d3b82beb94c887939d204186f59ed9eb758c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/f/6f6b3606f7c7cd549f2dbcd9e8f19d5bff28fe2e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/1/b114aa5c06e4767ff52e83d266ff69f759611c1c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/5/c5c4e6e9c28b7b4318d2711d92bbcc3bf7ef2c97" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/controller/NoteClientRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/controller/NoteClientRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/handler/CustomExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/handler/CustomExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/service/AuthenticationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/service/AuthenticationImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/service/NoteClientImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/service/NoteClientImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/wrapper/PageableResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/wrapper/PageableResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/test/java/pro/vaidas/notebookserver/service/impl/NoteServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/test/java/pro/vaidas/notebookserver/service/impl/NoteServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/NotebookServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/NotebookServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/model/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/model/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/repository/impl/NoteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/repository/impl/NoteDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/service/impl/NoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/service/impl/NoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +189,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.35142595&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;8abf36a83a42e56d861459d0086307f4&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -318,7 +257,14 @@
     </option>
     <option name="openRunningConfigInTab" value="true" />
   </component>
-  <component name="RunManager" selected="Spring Boot.NotebookClientApplication">
+  <component name="RunManager" selected="Spring Boot.NotebookServerApplication">
+    <configuration name="Notebook main" type="CompoundRunConfigurationType">
+      <toRun name="AuthServerApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="NotebookClientApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="NotebookServerApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="NotebookUserApplication" type="SpringBootApplicationConfigurationType" />
+      <method v="2" />
+    </configuration>
     <configuration name="Auth-server [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -601,7 +547,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NotebookUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="NotebookUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" activateToolWindowBeforeRun="false" nameIsGenerated="true">
       <module name="Notebook-user.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pro.vaidas.notebookuser.NotebookUserApplication" />
       <method v="2">
@@ -609,6 +555,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Compound.Notebook main" />
       <item itemvalue="Gradle.Auth-server [build]" />
       <item itemvalue="Gradle.Auth-server [clean]" />
       <item itemvalue="Gradle.NoteServiceImplTest" />
@@ -628,16 +575,16 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Auth-server [clean]" />
-        <item itemvalue="Gradle.Auth-server [build]" />
-        <item itemvalue="Gradle.Notebook-client [build]" />
         <item itemvalue="Gradle.Notebook-client [clean]" />
-        <item itemvalue="Gradle.NoteServiceImplTest" />
+        <item itemvalue="Gradle.Notebook-client [build]" />
+        <item itemvalue="Gradle.NoteServiceImplTest.getNoteById_Positive" />
+        <item itemvalue="Gradle.NoteServiceImplTest.getNoteById_Negative" />
+        <item itemvalue="Gradle.NoteServiceImplTest.getAllNotes_Positive" />
         <item itemvalue="Gradle.NoteServiceImplTest.deleteNote" />
         <item itemvalue="Gradle.NoteServiceImplTest.addNote_Positive" />
-        <item itemvalue="Gradle.NoteServiceImplTest.getNoteById_Negative" />
-        <item itemvalue="Gradle.NoteServiceImplTest.getNoteById_Positive" />
-        <item itemvalue="Gradle.NoteServiceImplTest.getAllNotes_Positive" />
+        <item itemvalue="Gradle.NoteServiceImplTest" />
+        <item itemvalue="Gradle.Auth-server [clean]" />
+        <item itemvalue="Gradle.Auth-server [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -722,6 +669,9 @@
       <workItem from="1689943573618" duration="139000" />
       <workItem from="1689943729041" duration="79000" />
       <workItem from="1689949034096" duration="1432000" />
+      <workItem from="1690013692924" duration="3850000" />
+      <workItem from="1690018112251" duration="198000" />
+      <workItem from="1690026515445" duration="3317000" />
     </task>
     <task id="LOCAL-00001" summary="OAuth2 server impl">
       <created>1683708831809</created>

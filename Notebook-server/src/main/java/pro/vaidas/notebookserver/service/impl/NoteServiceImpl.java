@@ -2,6 +2,8 @@ package pro.vaidas.notebookserver.service.impl;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -27,6 +29,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 @Service
 @AllArgsConstructor
 @Log4j2
+@CacheConfig(cacheNames = {"Note"})
 public class NoteServiceImpl implements NoteService {
 
     private final NoteRepository repository;
@@ -36,6 +39,7 @@ public class NoteServiceImpl implements NoteService {
     private static final int DEFAULT_PAGE_SIZE = 20;
 
     @Override
+    @Cacheable
     public Page<Note> getAllNotes(String content, Integer pageNumber, Integer pageSize) {
         PageRequest pageRequest = buildPageRequest(pageNumber, pageSize);
         Page<NoteDAO> notePage;
@@ -52,6 +56,7 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
+    @Cacheable(key = "#userUUID")
     public Page<Note> getNotesByUserId(String userUUID, Integer pageNumber, Integer pageSize) {
         PageRequest pageRequest = buildPageRequest(pageNumber, pageSize);
         Page<NoteDAO> userNotesPage;
@@ -64,6 +69,7 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
+    @Cacheable(key = "#id")
     public Note getNoteById(UUID id) {
         return repository.findById(id)
                 .map(mapper::noteDAOToNote)

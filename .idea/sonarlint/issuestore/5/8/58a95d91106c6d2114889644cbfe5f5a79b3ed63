@@ -1,12 +1,12 @@
 
-E
-java:S37404"/Provide the parametrized type for this generic.(˜¼
+L
+java:S37404"/Provide the parametrized type for this generic.(˜¼8è“¸ç—1
 b
-java:S11729"@Remove these unused method parameters "authDetails", "response".(ŠÎé¯ùÿÿÿÿ8Â‚õÆ—1
+java:S11729"@Remove these unused method parameters "authDetails", "response".(ŠÎé¯ùÿÿÿÿ8‚”¸ç—1
 E
-java:S1172?"(Remove this unused method parameter "s".(…üç8Ä‚õÆ—1
+java:S1172?"(Remove this unused method parameter "s".(…üç8ƒ”¸ç—1
 l
 java:S1128
-"ORemove this unused import 'org.springframework.web.bind.annotation.GetMapping'.(‡¡‰Ø8¯×ôÆ—1
+"ORemove this unused import 'org.springframework.web.bind.annotation.GetMapping'.(‡¡‰Ø8„”¸ç—1
 p
-java:S1128"SRemove this unused import 'org.springframework.web.bind.annotation.ResponseStatus'.(¯×ñ8¯×ôÆ—1
+java:S1128"SRemove this unused import 'org.springframework.web.bind.annotation.ResponseStatus'.(¯×ñ8„”¸ç—1

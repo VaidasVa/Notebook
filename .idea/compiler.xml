@@ -9,22 +9,8 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.26/8f8cf0372abf564913e9796623aac4c8ea44025a/lombok-1.18.26.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mapstruct/mapstruct-processor/1.5.5.Final/897f6f115930b936287bef552bf5fe28cc64717d/mapstruct-processor-1.5.5.Final.jar" />
         </processorPath>
-        <module name="Notebook-client.main" />
+        <module name="Notebook-server.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Kafka-service" target="17" />
-      <module name="Kafka-service.main" target="17" />
-      <module name="Kafka-service.test" target="17" />
-      <module name="notebook" target="17" />
-      <module name="User-service" target="17" />
-      <module name="User-service.main" target="17" />
-      <module name="User-service.test" target="17" />
-    </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="notebook" options="" />
-    </option>
   </component>
 </project>
