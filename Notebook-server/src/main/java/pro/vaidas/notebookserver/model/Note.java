@@ -21,5 +21,4 @@ public class Note implements Serializable {
     private String userUUID;
     private LocalDateTime created;
     private LocalDateTime updated;
-
 }

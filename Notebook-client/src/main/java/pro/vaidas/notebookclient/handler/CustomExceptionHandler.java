@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MissingRequestHeaderException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.client.HttpClientErrorException;
 
 import java.io.IOException;
 
@@ -16,6 +17,11 @@ public class CustomExceptionHandler {
     @ExceptionHandler(IOException.class)
     public ResponseEntity<String> handleInternalServerError(Exception ex) {
         return new ResponseEntity<>("Service is unavailable.", HttpStatus.SERVICE_UNAVAILABLE);
+    }
+
+    @ExceptionHandler(HttpClientErrorException.class)
+    public ResponseEntity<String> handleHttpClientErrorException(Exception ex) {
+        return new ResponseEntity<>("Client credentials error.", HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(ExpiredJwtException.class)

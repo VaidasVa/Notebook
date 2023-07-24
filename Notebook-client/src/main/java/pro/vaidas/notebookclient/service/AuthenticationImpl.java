@@ -72,9 +72,4 @@ public class AuthenticationImpl implements Authentication {
         SecurityContextHolder.setContext(securityContext);
         return true;
     }
-
-    public ResponseEntity<String> fallbackMethod(AuthDetails authDetails, Exception ex){
-        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("Service unavailable");
-    }
-
 }

@@ -12,9 +12,6 @@ spring:
       time-to-live: 600000
       key-prefix: noteserver
     cache-names: note
-
-
-
   jpa:
     hibernate:
       ddl-auto: update

@@ -23,34 +23,29 @@ spring:
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
 
-#management:
-#  health:
-#    circuitbreakers:
-#      enabled: true
-#    ratelimiters:
-#      enabled: true
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
-#    health:
-#      show-details: always
-#    info:
-#      show-details: always
-#
-#resilience4j:
-#  circuitbreaker:
-#    configs:
-#      default:
-#        registerHealthIndicator: true
-#        slidingWindowSize: 3
-#        failureRateThreshold: 50
-#        minimumNumberOfCalls: 3
-#        waitDurationInOpenState: 3000
-#        permittedNumberOfCallsInHalfOpenState: 3
-#        automaticTransitionFromOpenToHalfOpenEnabled: true
-#        slidingWindowType: COUNT_BASED
-
+resilience4j.circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
+        slidingWindowSize: 3
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 3
+        waitDurationInOpenState: 3000
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        slidingWindowType: COUNT_BASED
+        ignoreExceptions:
+          - java.io.IOException
+          - org.springframework.web.client.HttpClientErrorException
+resilience4j.retry:
+    configs:
+      default:
+        maxAttempts: 3
+        waitDuration: 1000
+        retryExceptions:
+          - org.springframework.web.client.HttpServerErrorException
+          - java.util.concurrent.TimeoutException
+          - java.io.IOException
 
 custom:
   notesPath: http://localhost:8081/api/v1/notes
