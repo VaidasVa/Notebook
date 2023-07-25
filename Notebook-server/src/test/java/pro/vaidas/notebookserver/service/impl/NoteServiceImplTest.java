@@ -1,6 +1,7 @@
 package pro.vaidas.notebookserver.service.impl;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -18,8 +19,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
@@ -53,8 +53,10 @@ class NoteServiceImplTest {
 
         Optional<Note> note = Optional.ofNullable(service.getNoteById(NOTE_ID));
 
-        note.ifPresent(result ->
-                assertEquals("Test note title", result.getTitle()));
+        note.ifPresentOrElse(
+                result ->
+                        assertEquals("Test note title", result.getTitle()),
+                () -> fail("Note not found"));
     }
 
     @Test
@@ -66,13 +68,14 @@ class NoteServiceImplTest {
     }
 
     @Test
+    @Disabled
     void addNote_Positive() {
-        // not implemented, void method
     }
 
     @Test
+    @Disabled
     void updateNote() {
-        // not implemented, void method
+
     }
 
     @Test

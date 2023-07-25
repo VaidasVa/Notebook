@@ -33,8 +33,8 @@ public class AuthController {
     }
 
     @PostMapping
-    @CircuitBreaker(name= "default", fallbackMethod = "fallbackMethodAuth")
-    @Retry(name="default")
+    @CircuitBreaker(name= "cBreaker-config", fallbackMethod = "fallbackMethodAuth")
+    @Retry(name="retry-config")
     public ResponseEntity<String> auth(
             @Required @Validated @RequestBody AuthDetails authDetails,
             HttpServletResponse response)
@@ -48,8 +48,8 @@ public class AuthController {
     }
 
     @PostMapping("/validate")
-    @CircuitBreaker(name= "default", fallbackMethod = "fallbackMethodValidate")
-    @Retry(name="default")
+    @CircuitBreaker(name= "cBreaker-config", fallbackMethod = "fallbackMethodValidate")
+    @Retry(name="retry-config")
     public Jws validate(@RequestBody String token){
         return jwtValidationService.validate(token);
     }

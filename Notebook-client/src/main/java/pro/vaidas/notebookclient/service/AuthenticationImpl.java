@@ -55,10 +55,6 @@ public class AuthenticationImpl implements Authentication {
 
     @Override
     public Boolean setSecurityContext(String token) {
-        return checkAndSetSecurityContext(token);
-    }
-
-    private Boolean checkAndSetSecurityContext(String token){
         String jwt = token.replace("Bearer ", "");
         var claims = Jwts.parser().setSigningKey(SECRET).parseClaimsJws(jwt).getBody();
 

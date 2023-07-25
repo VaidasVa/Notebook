@@ -5,27 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="388938fa-49f7-482a-a9b9-f2d464d23d25" name="Changes" comment="OAuth2 server impl">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/012d6cde5f1ab67cb6526089b48a45166cd8a57e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0ffa26fb45a9682c9b3a2b373a6866017bba3021" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/421edec1cdab25d5c5686c39c01bdf4c35648c41" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/58a95d91106c6d2114889644cbfe5f5a79b3ed63" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f6b3606f7c7cd549f2dbcd9e8f19d5bff28fe2e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6e357aaa5cb0c63113452c1ebea7428f5763ec4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/1/012d6cde5f1ab67cb6526089b48a45166cd8a57e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/f/0ffa26fb45a9682c9b3a2b373a6866017bba3021" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/2/421edec1cdab25d5c5686c39c01bdf4c35648c41" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/8/58a95d91106c6d2114889644cbfe5f5a79b3ed63" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/f/6f6b3606f7c7cd549f2dbcd9e8f19d5bff28fe2e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/6/b6e357aaa5cb0c63113452c1ebea7428f5763ec4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/handler/CustomExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/handler/CustomExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/controller/NoteClientRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/controller/NoteClientRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/service/AuthenticationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/java/pro/vaidas/notebookclient/service/AuthenticationImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebook-client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-client/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/model/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/java/pro/vaidas/notebookserver/model/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebook-server/src/test/java/pro/vaidas/notebookserver/service/impl/NoteServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notebook-server/src/test/java/pro/vaidas/notebookserver/service/impl/NoteServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,8 +107,8 @@
         <option value="Enum" />
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -155,47 +142,47 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ConfigurationTypeDashboardGroupingRule": "false",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "StatusDashboardGroupingRule": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "dev",
-    "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "/Users/vaidas/Desktop/Files/Programming/GitHub/Notebook/Auth-server/src/main/java/pro/vaidas/authserver/model",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.35142595",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "spring.configuration.checksum": "8abf36a83a42e56d861459d0086307f4"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ConfigurationTypeDashboardGroupingRule&quot;: &quot;false&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;StatusDashboardGroupingRule&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vaidas/Desktop/Files/Programming/GitHub/Notebook/Auth-server/src/main/java/pro/vaidas/authserver/model&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.35142595&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;8abf36a83a42e56d861459d0086307f4&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "module"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;
     ],
-    "DatabaseDriversLRU": [
-      "mysql"
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -229,10 +216,10 @@
       <recent name="pro.vaidas.notebookserver.config" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="pro.vaidas.notebookserver.web.controller.api" />
       <recent name="pro.vaidas.notebookuser.service.impl" />
       <recent name="pro.vaidas.notebookserver.service.impl" />
       <recent name="pro.vaidas.notebookserver.business.service.impl" />
-      <recent name="pro.vaidas.notebookserver.web.controller.api" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="pro.vaidas.notebookclient.model" />
@@ -251,7 +238,7 @@
     </option>
     <option name="openRunningConfigInTab" value="true" />
   </component>
-  <component name="RunManager" selected="Spring Boot.NotebookClientApplication">
+  <component name="RunManager" selected="Gradle.NoteServiceImplTest.getNoteById_Positive">
     <configuration name="Notebook main" type="CompoundRunConfigurationType">
       <toRun name="AuthServerApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="NotebookClientApplication" type="SpringBootApplicationConfigurationType" />
@@ -569,9 +556,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.NoteServiceImplTest.getNoteById_Positive" />
         <item itemvalue="Gradle.Notebook-client [clean]" />
         <item itemvalue="Gradle.Notebook-client [build]" />
-        <item itemvalue="Gradle.NoteServiceImplTest.getNoteById_Positive" />
         <item itemvalue="Gradle.NoteServiceImplTest.getNoteById_Negative" />
         <item itemvalue="Gradle.NoteServiceImplTest.getAllNotes_Positive" />
         <item itemvalue="Gradle.NoteServiceImplTest.deleteNote" />
@@ -666,7 +653,9 @@
       <workItem from="1690013692924" duration="3850000" />
       <workItem from="1690018112251" duration="198000" />
       <workItem from="1690026515445" duration="3317000" />
-      <workItem from="1690180061351" duration="4787000" />
+      <workItem from="1690180061351" duration="7023000" />
+      <workItem from="1690271018582" duration="23000" />
+      <workItem from="1690286443176" duration="2471000" />
     </task>
     <task id="LOCAL-00001" summary="OAuth2 server impl">
       <created>1683708831809</created>

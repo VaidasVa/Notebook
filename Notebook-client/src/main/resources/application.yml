@@ -25,7 +25,7 @@ spring:
 
 resilience4j.circuitbreaker:
     configs:
-      default:
+      cBreaker-config:
         registerHealthIndicator: true
         slidingWindowSize: 3
         failureRateThreshold: 50
@@ -39,7 +39,7 @@ resilience4j.circuitbreaker:
           - org.springframework.web.client.HttpClientErrorException
 resilience4j.retry:
     configs:
-      default:
+      retry-config:
         maxAttempts: 3
         waitDuration: 1000
         retryExceptions:
